@@ -11,6 +11,9 @@ class AppComponents {
   //_______icons
   static const String calenderIcon = '${iconPath}calender-icon.svg';
   static const String nakathIcon = '${iconPath}nakath-icon.svg';
+  static const String halfLeftMoon = '${iconPath}half-left-moon.svg';
+  static const String halfRightMoon = '${iconPath}half-right-moon.svg';
+  static const String noMoon = '${iconPath}no-moon.svg';
 
   //_______fonts
   static const String accentFont = 'AccentFont';

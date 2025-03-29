@@ -24,6 +24,30 @@ class CustomDateTime {
     return monthMap[month]!;
   }
 
+  String getCustomMonthShort(int month) {
+    Map<int, String> monthMap = {
+      1: 'ck', // January
+      2: 'fmn', // February
+      3: 'ud¾;=', // March
+      4: 'wfma%,a', // April
+      5: 'uehs', // May
+      6: 'cqks', // June
+      7: 'cQ,s', // July
+      8: 'wf.da', // August
+      9: 'iema', // September
+      10: 'Tlaf;da', // October
+      11: 'fkdje', // November
+      12: 'foie' // December
+    };
+
+    // Make sure to handle invalid month numbers
+    if (month < 1 || month > 12) {
+      return 'Unknown Month';
+    }
+
+    return monthMap[month]!;
+  }
+
   // Function to convert day of the week to custom values
   String getCustomDay(int weekday) {
     Map<int, String> dayMap = {

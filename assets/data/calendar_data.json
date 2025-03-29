@@ -12,21 +12,21 @@
     "moonPhases": [
       {
         "year": 2025,
-        "month": 3,
+        "month": 9,
         "day": 10,
         "phase": "half_left",
         "name": "First Quarter"
       },
       {
         "year": 2025,
-        "month": 3,
-        "day": 18,
+        "month": 9,
+        "day": 28,
         "phase": "half_right",
         "name": "Last Quarter"
       },
       {
         "year": 2025,
-        "month": 3,
+        "month": 9,
         "day": 25,
         "phase": "None",
         "name": "No Moon"
