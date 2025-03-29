@@ -16,4 +16,7 @@ class AppComponents {
   static const String accentFont = 'AccentFont';
   static const String titleFont = 'TitleFont';
   static const String subTextFont = 'SubTextFont';
+
+  //_______data
+  static const String calendarData = "assets/data/calendar_data.json";
 }

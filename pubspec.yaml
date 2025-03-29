@@ -34,4 +34,5 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/data/calendar_data.json
 

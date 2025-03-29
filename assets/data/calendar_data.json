@@ -1,0 +1,44 @@
+{
+    "holidays": [
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 1,
+        "name": "New Year's Day",
+        "description": "නව වසර දිනය",
+        "isPublicHoliday": true
+      }
+    ],
+    "moonPhases": [
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 10,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 18,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 25,
+        "phase": "None",
+        "name": "No Moon"
+      }
+    ],
+    "specialDates": [
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 10,
+        "name": "Poya Day",
+        "description": "අඟහරු පූර් පසලොස්වක පෝය දිනය"
+      }
+    ]
+  }

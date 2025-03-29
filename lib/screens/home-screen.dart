@@ -28,7 +28,9 @@ class HomePage extends StatelessWidget {
                 // Maximum content width for tablets and larger screens
                 double maxContentWidth = 900;
                 double currentWidth = constraints.maxWidth;
-                double usedWidth = currentWidth > maxContentWidth ? maxContentWidth : currentWidth;
+                double usedWidth = currentWidth > maxContentWidth
+                    ? maxContentWidth
+                    : currentWidth;
                 return Center(
                   child: Container(
                     width: usedWidth,
@@ -42,15 +44,15 @@ class HomePage extends StatelessWidget {
                           textTitle: 'Èk o¾Ykh',
                           textYear: "2025",
                           onPressed: () {
-                            // Add navigation logic
+                            Navigator.pushNamed(context, '/calendar');
                           },
                         ),
                         SizedBox(height: 20),
                         _buildMainSectionTitle(),
                         SizedBox(height: 20),
                         nakathButton(
-                          context, 
-                          textTitle: 'w¨;a wjqreÿ', 
+                          context,
+                          textTitle: 'w¨;a wjqreÿ',
                           textYear: 'kele;a iSÜgqj',
                           onPressed: () {
                             // Add navigation logic
@@ -60,7 +62,8 @@ class HomePage extends StatelessWidget {
                         GridView.builder(
                           shrinkWrap: true,
                           physics: NeverScrollableScrollPhysics(),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: columnsCount,
                             childAspectRatio: 1.5,
                             mainAxisSpacing: 16,
@@ -75,10 +78,9 @@ class HomePage extends StatelessWidget {
                               {"first": "rdYs", "second": "wh jeh"},
                             ];
                             return buildSunButton(
-                              context, 
-                              buttonData[index]["first"]!, 
-                              buttonData[index]["second"]!
-                            );
+                                context,
+                                buttonData[index]["first"]!,
+                                buttonData[index]["second"]!);
                           },
                         ),
                       ],

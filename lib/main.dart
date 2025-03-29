@@ -1,3 +1,4 @@
+import 'package:e_litha/screens/calender-screen.dart';
 import 'package:e_litha/screens/home-screen.dart';
 import 'package:e_litha/screens/loading-screen.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(title: 'E-Litha', initialRoute: '/', routes: {
       '/': (context) => LoadingScreen(),
       '/home': (context) => HomePage(),
+      '/calendar': (context) => CalendarScreen(),
     });
   }
 }
