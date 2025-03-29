@@ -17,19 +17,75 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                _buildHeaderSection(),
-                SizedBox(height: 20),
-                _buildYearButton(context),
-                SizedBox(height: 20),
-                _buildMainSectionTitle(),
-                SizedBox(height: 20),
-                _buildNakathButton(context),
-                SizedBox(height: 20),
-                _buildMainGridButtons(context),
-              ],
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                int columnsCount = 2; // Default for mobile
+                if (constraints.maxWidth > 600 && constraints.maxWidth <= 900) {
+                  columnsCount = 3; // For tablets in portrait
+                } else if (constraints.maxWidth > 900) {
+                  columnsCount = 4; // For tablets in landscape and larger
+                }
+                // Maximum content width for tablets and larger screens
+                double maxContentWidth = 900;
+                double currentWidth = constraints.maxWidth;
+                double usedWidth = currentWidth > maxContentWidth ? maxContentWidth : currentWidth;
+                return Center(
+                  child: Container(
+                    width: usedWidth,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        _buildHeaderSection(),
+                        SizedBox(height: 20),
+                        calenderButton(
+                          context,
+                          textTitle: 'Èk o¾Ykh',
+                          textYear: "2025",
+                          onPressed: () {
+                            // Add navigation logic
+                          },
+                        ),
+                        SizedBox(height: 20),
+                        _buildMainSectionTitle(),
+                        SizedBox(height: 20),
+                        nakathButton(
+                          context, 
+                          textTitle: 'w¨;a wjqreÿ', 
+                          textYear: 'kele;a iSÜgqj',
+                          onPressed: () {
+                            // Add navigation logic
+                          },
+                        ),
+                        SizedBox(height: 20),
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: columnsCount,
+                            childAspectRatio: 1.5,
+                            mainAxisSpacing: 16,
+                            crossAxisSpacing: 16,
+                          ),
+                          itemCount: 4,
+                          itemBuilder: (context, index) {
+                            List<Map<String, String>> buttonData = [
+                              {"first": "iqN", "second": "ojia"},
+                              {"first": "iqN", "second": "uqyq¾"},
+                              {"first": "rdyq", "second": "ld,h"},
+                              {"first": "rdYs", "second": "wh jeh"},
+                            ];
+                            return buildSunButton(
+                              context, 
+                              buttonData[index]["first"]!, 
+                              buttonData[index]["second"]!
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              },
             ),
           ),
         ),
@@ -66,17 +122,6 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  Widget _buildYearButton(BuildContext context) {
-    return calenderButton(
-      context,
-      textTitle: 'Èk o¾Ykh',
-      textYear: '2025',
-      onPressed: () {
-        // Add navigation logic
-      },
-    );
-  }
-
   Widget _buildMainSectionTitle() {
     return Padding(
       padding: const EdgeInsets.only(left: 18.0, bottom: 10.0, top: 15.0),
@@ -88,34 +133,6 @@ class HomePage extends StatelessWidget {
           color: AppColor.subTextColor,
         ),
       ),
-    );
-  }
-
-  Widget _buildNakathButton(BuildContext context) {
-    return nakathButton(
-      context,
-      textTitle: 'w¨;a wjqreÿ',
-      textYear: 'kele;a iSÜgqj',
-      onPressed: () {
-        // Add navigation logic
-      },
-    );
-  }
-
-  Widget _buildMainGridButtons(BuildContext context) {
-    return GridView.count(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      crossAxisCount: 2,
-      childAspectRatio: 1.8,
-      mainAxisSpacing: 16,
-      crossAxisSpacing: 20,
-      children: [
-        buildSunButton(context, 'iqN', 'ojia'),
-        buildSunButton(context, 'iqN', 'uqyq¾;'),
-        buildSunButton(context, 'rdyq', 'ld,h'),
-        buildSunButton(context, 'rdYs', 'wh jeh'),
-      ],
     );
   }
 }

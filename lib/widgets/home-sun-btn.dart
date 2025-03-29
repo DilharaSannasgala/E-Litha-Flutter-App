@@ -19,6 +19,13 @@ Widget buildSunButton(
         ),
       ],
     ),
+    foregroundDecoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(15),
+      border: Border.all(
+        color: AppColor.borderLightColor,
+        width: 2,
+      ),
+    ),
     child: Material(
       color: Colors.transparent,
       child: InkWell(

@@ -24,6 +24,13 @@ Widget nakathButton(
       ],
       borderRadius: BorderRadius.circular(14),
     ),
+    foregroundDecoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(12),
+      border: Border.all(
+        color: AppColor.borderLightColor,
+        width: 2,
+      ),
+    ),
     child: Material(
       color: Colors.transparent,
       child: InkWell(
