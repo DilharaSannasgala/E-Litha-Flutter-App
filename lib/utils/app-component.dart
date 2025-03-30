@@ -22,4 +22,5 @@ class AppComponents {
 
   //_______data
   static const String calendarData = "assets/data/calendar_data.json";
+  static const String nakathData = "assets/data/nakath_data.json";
 }

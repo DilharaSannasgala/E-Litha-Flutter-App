@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                           textTitle: 'w¨;a wjqreÿ',
                           textYear: 'kele;a iSÜgqj',
                           onPressed: () {
-                            // Add navigation logic
+                            Navigator.pushNamed(context, '/nakath');
                           },
                         ),
                         SizedBox(height: 20),
@@ -107,10 +107,11 @@ class HomePage extends StatelessWidget {
         Text(
           'wdhqfndajka',
           style: TextStyle(
-            fontFamily: AppComponents.titleFont,
-            fontSize: 50,
-            color: AppColor.titleTextColor,
-          ),
+              fontFamily: AppComponents.titleFont,
+              fontSize: 50,
+              color: AppColor.titleTextColor,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 1),
         ),
         Text(
           '${now.day} ${customDay} ${customMonth} ${now.year} \$ Y%S nqoaO j¾Y ${customYear}',

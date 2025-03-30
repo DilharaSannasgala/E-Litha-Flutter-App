@@ -1,6 +1,7 @@
 import 'package:e_litha/screens/calender-screen.dart';
 import 'package:e_litha/screens/home-screen.dart';
 import 'package:e_litha/screens/loading-screen.dart';
+import 'package:e_litha/screens/nakath-screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MainApp extends StatelessWidget {
       '/': (context) => LoadingScreen(),
       '/home': (context) => HomePage(),
       '/calendar': (context) => CalendarScreen(),
+      '/nakath': (context) => NakathScreen(),
     });
   }
 }

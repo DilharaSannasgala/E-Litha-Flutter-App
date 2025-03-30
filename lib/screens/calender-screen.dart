@@ -112,7 +112,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: isLoading
-              ? Center(child: CircularProgressIndicator())
+              ? Center(
+                  child: CircularProgressIndicator(color: AppColor.accentColor))
               : _buildResponsiveLayout(context, isWideScreen),
         ),
       ),

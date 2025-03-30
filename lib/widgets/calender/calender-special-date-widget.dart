@@ -148,7 +148,7 @@ class SpecialDateCard extends StatelessWidget {
                   Text(
                     description,
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 24,
                       fontFamily: AppComponents.accentFont,
                       color: AppColor.btnTextColor,
                     ),
