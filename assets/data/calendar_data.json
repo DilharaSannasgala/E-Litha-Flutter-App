@@ -5,28 +5,52 @@
         "month": 3,
         "day": 1,
         "name": "New Year's Day",
-        "description": "නව වසර දිනය",
+        "description": "§mdj,S Èkh",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 1,
+        "name": "New Year's Day",
+        "description": "§mdj,S Èkh",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 2,
+        "name": "Maha Shivaratri",
+        "description": "§mdj,S Èkh",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "day": 25,
+        "name": "Good Friday",
+        "description": "§mdj,S Èkh",
         "isPublicHoliday": true
       }
     ],
     "moonPhases": [
       {
         "year": 2025,
-        "month": 9,
+        "month": 3,
         "day": 10,
         "phase": "half_left",
         "name": "First Quarter"
       },
       {
         "year": 2025,
-        "month": 9,
+        "month": 3,
         "day": 28,
         "phase": "half_right",
         "name": "Last Quarter"
       },
       {
         "year": 2025,
-        "month": 9,
+        "month": 3,
         "day": 25,
         "phase": "None",
         "name": "No Moon"
@@ -38,7 +62,7 @@
         "month": 3,
         "day": 10,
         "name": "Poya Day",
-        "description": "අඟහරු පූර් පසලොස්වක පෝය දිනය"
+        "description": "wei< mqr mif,diajl fmdfyda Èkh"
       }
     ]
   }

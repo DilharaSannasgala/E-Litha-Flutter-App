@@ -32,6 +32,13 @@ class MonthNavigation extends StatelessWidget {
             ),
           ],
         ),
+        foregroundDecoration: BoxDecoration(
+          border: Border.all(
+            color: AppColor.borderLightColor,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(30),
+        ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [

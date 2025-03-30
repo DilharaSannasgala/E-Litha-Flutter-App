@@ -33,6 +33,13 @@ class CalendarGrid extends StatelessWidget {
           )
         ],
       ),
+      foregroundDecoration: BoxDecoration(
+        border: Border.all(
+          color: AppColor.borderLightColor,
+          width: 2,
+        ),
+        borderRadius: BorderRadius.circular(16),
+      ),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -171,11 +178,12 @@ class CalendarGrid extends StatelessWidget {
           style: TextStyle(
             color: textColor,
             fontSize: 16,
-            fontWeight: day.isToday ? FontWeight.bold : FontWeight.normal,
+            fontWeight: day.isToday || day.isSpecialDay
+                ? FontWeight.bold
+                : FontWeight.normal,
             fontFamily: AppComponents.accentFont,
           ),
         ),
-        if (specialIndicator != null) specialIndicator,
       ],
     );
   }

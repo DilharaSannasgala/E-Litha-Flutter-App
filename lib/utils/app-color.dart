@@ -8,4 +8,5 @@ class AppColor {
   static const Color borderDarkColor = Color(0xFFF5D33B);
   static const Color borderLightColor = Color(0xFFFFF5C9);
   static const Color bgColor = Color(0xFFFFFCF6);
+  static const Color iconBgColor = Color(0x6CF8BB2B);
 }
