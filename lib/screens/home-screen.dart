@@ -1,3 +1,4 @@
+import 'package:e_litha/screens/event-time-screen.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
@@ -60,29 +61,47 @@ class HomePage extends StatelessWidget {
                         ),
                         SizedBox(height: 20),
                         GridView.builder(
-                          shrinkWrap: true,
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: columnsCount,
-                            childAspectRatio: 1.5,
-                            mainAxisSpacing: 16,
-                            crossAxisSpacing: 16,
-                          ),
-                          itemCount: 4,
-                          itemBuilder: (context, index) {
-                            List<Map<String, String>> buttonData = [
-                              {"first": "iqN", "second": "ojia"},
-                              {"first": "iqN", "second": "uqyq¾"},
-                              {"first": "rdyq", "second": "ld,h"},
-                              {"first": "rdYs", "second": "wh jeh"},
-                            ];
-                            return buildSunButton(
+                            shrinkWrap: true,
+                            physics: NeverScrollableScrollPhysics(),
+                            gridDelegate:
+                                SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: columnsCount,
+                              childAspectRatio: 1.5,
+                              mainAxisSpacing: 16,
+                              crossAxisSpacing: 16,
+                            ),
+                            itemCount: 4,
+                            itemBuilder: (context, index) {
+                              List<Map<String, dynamic>> buttonData = [
+                                {
+                                  "first": "iqN",
+                                  "second": "ojia",
+                                  "screen": EventTimeScreen()
+                                },
+                                {
+                                  "first": "iqN",
+                                  "second": "uqyq¾",
+                                  "screen": EventTimeScreen()
+                                },
+                                {
+                                  "first": "rdyq",
+                                  "second": "ld,h",
+                                  "screen": EventTimeScreen()
+                                },
+                                {
+                                  "first": "rdYs",
+                                  "second": "wh jeh",
+                                  "screen": EventTimeScreen()
+                                },
+                              ];
+
+                              return buildSunButton(
                                 context,
-                                buttonData[index]["first"]!,
-                                buttonData[index]["second"]!);
-                          },
-                        ),
+                                buttonData[index]["first"],
+                                buttonData[index]["second"],
+                                buttonData[index]["screen"],
+                              );
+                            }),
                       ],
                     ),
                   ),

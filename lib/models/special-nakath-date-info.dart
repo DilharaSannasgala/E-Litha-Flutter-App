@@ -5,6 +5,7 @@ class SpecialNakathDateInfo {
   final String time;
   final String name;
   final String description;
+  final String notification;
 
   SpecialNakathDateInfo({
     required this.year,
@@ -13,6 +14,7 @@ class SpecialNakathDateInfo {
     required this.time,
     required this.name,
     required this.description,
+    required this.notification,
   });
 
   factory SpecialNakathDateInfo.fromJson(Map<String, dynamic> json) {
@@ -23,6 +25,7 @@ class SpecialNakathDateInfo {
       time: json['time'] as String,
       name: json['name'] as String,
       description: json['description'] as String? ?? '',
+      notification: json['notification'] as String? ?? '',
     );
   }
 }
