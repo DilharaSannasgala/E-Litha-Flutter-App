@@ -14,6 +14,9 @@ class AppComponents {
   static const String halfLeftMoon = '${iconPath}half-left-moon.svg';
   static const String halfRightMoon = '${iconPath}half-right-moon.svg';
   static const String noMoon = '${iconPath}no-moon.svg';
+  static const String earPierced = '${iconPath}ear-pierce.svg';
+  static const String hairCut = '${iconPath}hair-cut.svg';
+  static const String feedRice = '${iconPath}feed-rice.svg';
 
   //_______fonts
   static const String accentFont = 'AccentFont';
