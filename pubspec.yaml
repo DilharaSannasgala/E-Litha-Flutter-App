@@ -37,4 +37,5 @@ flutter:
     - assets/icons/
     - assets/data/calendar_data.json
     - assets/data/nakath_data.json
+    - assets/data/event_data.json
 

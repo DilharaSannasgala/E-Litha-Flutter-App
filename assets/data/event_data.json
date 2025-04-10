@@ -1,0 +1,31 @@
+{
+    "eventTimes": [
+      {
+        "title": "lka ú§u",
+        "icon": "assets/icons/ear-pierce.svg",
+        "dates": []
+      },
+      {
+        "title": "ysifla lemSu",
+        "icon": "assets/icons/hair-cut.svg",
+        "dates": [
+          {
+            "day": 30,
+            "month": 1,
+            "description": "ckjdß 30 n%yiam;skaod Wfoa 9-32 g W;=r n,d"
+          },
+          {
+            "day": 19,
+            "month": 3,
+            "description": "ud¾;= 19 nodod Wfoa 10-01 g kef.kysr n,d"
+          }
+        ]
+      },
+      {
+        "title": "n;a leùu",
+        "icon": "assets/icons/feed-rice.svg",
+        "dates": []
+      }
+    ]
+  }
+  

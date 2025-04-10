@@ -1,7 +1,9 @@
+import 'dart:convert';
 import 'package:e_litha/models/event-time-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/widgets/event-times/event-card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../utils/app-component.dart';
 
 class EventTimeScreen extends StatefulWidget {
@@ -18,51 +20,13 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
   @override
   void initState() {
     super.initState();
-    // For demo we'll use dummy data instead of loading from assets
-    _loadDummyData();
+    _loadEventTimeData();
   }
 
-  void _loadDummyData() {
-    // Dummy data for demonstration
-    setState(() {
-      eventTimes = [
-        EventTimeInfo(
-          title: 'lka ú§u',
-          icon: AppComponents.earPierced,
-          dates: [],
-        ),
-        EventTimeInfo(
-          title: 'ysifla lemSu',
-          icon: AppComponents.hairCut,
-          dates: [
-            EventDate(
-              day: 30,
-              month: 1, // January
-              description: 'ckjdß 30 n%yiam;skaod Wfoa 9-32 g W;=r n,d',
-            ),
-            EventDate(
-              day: 19,
-              month: 3, // March
-              description: 'ud¾;= 19 nodod Wfoa 10-01 g kef.kysr n,d',
-            ),
-          ],
-        ),
-        EventTimeInfo(
-          title: 'n;a leùu',
-          icon: AppComponents.feedRice,
-          dates: [],
-        ),
-      ];
-      isLoading = false;
-    });
-  }
-
-  // In a real implementation, you would load data from assets like this:
-  /*
   Future<void> _loadEventTimeData() async {
     try {
       setState(() => isLoading = true);
-      final String jsonString = await rootBundle.loadString('assets/data/event_times.json');
+      final String jsonString = await rootBundle.loadString(AppComponents.eventData);
       final Map<String, dynamic> jsonData = json.decode(jsonString);
 
       setState(() {
@@ -86,7 +50,6 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
       }
     }
   }
-  */
 
   @override
   Widget build(BuildContext context) {
