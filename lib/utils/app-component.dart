@@ -14,9 +14,6 @@ class AppComponents {
   static const String halfLeftMoon = '${iconPath}half-left-moon.svg';
   static const String halfRightMoon = '${iconPath}half-right-moon.svg';
   static const String noMoon = '${iconPath}no-moon.svg';
-  static const String earPierced = '${iconPath}ear-pierce.svg';
-  static const String hairCut = '${iconPath}hair-cut.svg';
-  static const String feedRice = '${iconPath}feed-rice.svg';
 
   //_______fonts
   static const String accentFont = 'AccentFont';
@@ -27,4 +24,5 @@ class AppComponents {
   static const String calendarData = "assets/data/calendar_data.json";
   static const String nakathData = "assets/data/nakath_data.json";
   static const String eventData = "assets/data/event_data.json";
+  static const String rashiTableData = 'assets/data/rashi_table.json';
 }
