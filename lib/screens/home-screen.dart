@@ -1,11 +1,12 @@
 import 'package:e_litha/screens/event-time-screen.dart';
+import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
-import 'package:e_litha/widgets/home-calender-btn.dart';
-import 'package:e_litha/widgets/home-nakath-btn.dart';
-import 'package:e_litha/widgets/home-sun-btn.dart';
+import 'package:e_litha/widgets/home/home-calender-btn.dart';
+import 'package:e_litha/widgets/home/home-nakath-btn.dart';
+import 'package:e_litha/widgets/home/home-sun-btn.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -87,7 +88,7 @@ class HomePage extends StatelessWidget {
                                 {
                                   "first": "rdyq",
                                   "second": "ld,h",
-                                  "screen": EventTimeScreen()
+                                  "screen": RahuKalayaScreen()
                                 },
                                 {
                                   "first": "rdYs",

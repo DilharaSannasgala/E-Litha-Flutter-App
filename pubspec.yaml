@@ -39,4 +39,5 @@ flutter:
     - assets/data/nakath_data.json
     - assets/data/event_data.json
     - assets/data/rashi_table.json
+    - assets/data/rahukalaya_data.json
 
