@@ -91,8 +91,8 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> {
                   child: Column(
                     children: [
                       if (isLoading)
-                        const Center(
-                          child: CircularProgressIndicator(),
+                         Center(
+                          child: CircularProgressIndicator(color: AppColor.accentColor),
                         )
                       else if (errorMessage != null)
                         Center(

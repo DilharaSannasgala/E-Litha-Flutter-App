@@ -6,12 +6,16 @@ class MonthNavigation extends StatelessWidget {
   final String month;
   final VoidCallback onPrevious;
   final VoidCallback onNext;
+  final bool canGoBack;
+  final bool canGoForward;
 
   const MonthNavigation({
     Key? key,
     required this.month,
     required this.onPrevious,
     required this.onNext,
+    this.canGoBack = true,
+    this.canGoForward = true,
   }) : super(key: key);
 
   @override
@@ -45,10 +49,10 @@ class MonthNavigation extends StatelessWidget {
             IconButton(
               icon: Icon(
                 Icons.arrow_back_ios,
-                color: AppColor.accentColor,
+                color: canGoBack ? AppColor.accentColor : AppColor.borderLightColor,
                 size: 18,
               ),
-              onPressed: onPrevious,
+              onPressed: canGoBack ? onPrevious : null,
             ),
             Text(
               month,
@@ -61,10 +65,10 @@ class MonthNavigation extends StatelessWidget {
             IconButton(
               icon: Icon(
                 Icons.arrow_forward_ios,
-                color: AppColor.accentColor,
+                color: canGoForward ? AppColor.accentColor : AppColor.borderLightColor,
                 size: 18,
               ),
-              onPressed: onNext,
+              onPressed: canGoForward ? onNext : null,
             ),
           ],
         ),

@@ -18,6 +18,7 @@ class CalendarScreen extends StatefulWidget {
 }
 
 class _CalendarScreenState extends State<CalendarScreen> {
+  late PageController _pageController;
   late int currentMonth;
   late int currentYear;
   List<HolidayInfo> holidayData = [];
@@ -33,9 +34,19 @@ class _CalendarScreenState extends State<CalendarScreen> {
   void initState() {
     super.initState();
     final now = DateTime.now();
-    currentMonth = now.month - 1;
+    currentMonth = now.month - 1; // 0-indexed month
     currentYear = now.year;
+    
+    // Initialize the PageController with the current month
+    _pageController = PageController(initialPage: currentMonth);
+    
     _loadCalendarData();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadCalendarData() async {
@@ -84,6 +95,26 @@ class _CalendarScreenState extends State<CalendarScreen> {
           ),
         );
       }
+    }
+  }
+
+  // Navigate to the previous month if possible (within the current year)
+  void _previousMonth() {
+    if (currentMonth > 0) {
+      _pageController.previousPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
+    }
+  }
+
+  // Navigate to the next month if possible (within the current year)
+  void _nextMonth() {
+    if (currentMonth < 11) {
+      _pageController.nextPage(
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+      );
     }
   }
 
@@ -181,6 +212,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
           color: AppColor.borderLightColor,
           width: 2,
         ),
+        borderRadius: BorderRadius.circular(16),
       ),
       padding: const EdgeInsets.all(16.0),
       child: SingleChildScrollView(
@@ -188,37 +220,42 @@ class _CalendarScreenState extends State<CalendarScreen> {
           children: [
             MonthNavigation(
               month: CustomDateTime().getCustomMonth(currentMonth + 1),
-              onPrevious: () {
-                setState(() {
-                  if (currentMonth > 0) {
-                    currentMonth--;
-                  } else {
-                    currentMonth = 11;
-                    currentYear--;
-                  }
-                });
-              },
-              onNext: () {
-                setState(() {
-                  if (currentMonth < 11) {
-                    currentMonth++;
-                  } else {
-                    currentMonth = 0;
-                    currentYear++;
-                  }
-                });
-              },
+              onPrevious: _previousMonth,
+              onNext: _nextMonth,
+              canGoBack: currentMonth > 0,
+              canGoForward: currentMonth < 11,
             ),
             SizedBox(height: 16),
-            CalendarGrid(
-              year: currentYear,
-              month: currentMonth,
-              holidays: getHolidaysForMonth(currentYear, currentMonth),
-              specialDates: getSpecialDatesForMonth(currentYear, currentMonth),
-            ),
-            SizedBox(height: 25),
-            MoonPhaseRow(
-              moonPhases: getMoonPhasesForMonth(currentYear, currentMonth),
+            Container(
+              height: 400, // Set a fixed height for the PageView
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: 12, // 12 months in a year
+                onPageChanged: (index) {
+                  setState(() {
+                    currentMonth = index;
+                  });
+                },
+                physics: currentMonth <= 0 || currentMonth >= 11
+                    ? NeverScrollableScrollPhysics() // Disable scrolling at boundaries
+                    : BouncingScrollPhysics(), // Otherwise enable scrolling
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      CalendarGrid(
+                        year: currentYear,
+                        month: index,
+                        holidays: getHolidaysForMonth(currentYear, index),
+                        specialDates: getSpecialDatesForMonth(currentYear, index),
+                      ),
+                      SizedBox(height: 25),
+                      MoonPhaseRow(
+                        moonPhases: getMoonPhasesForMonth(currentYear, index),
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ],
         ),

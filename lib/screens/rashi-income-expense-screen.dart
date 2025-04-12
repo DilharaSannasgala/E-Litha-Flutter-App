@@ -62,7 +62,7 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
         ),
       ),
       body: isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ?  Center(child: CircularProgressIndicator(color: AppColor.accentColor,))
           : SafeArea(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(16),
