@@ -26,4 +26,8 @@ class AppComponents {
   static const String eventData = "assets/data/event_data.json";
   static const String rashiTableData = 'assets/data/rashi_table.json';
   static const String rahuKalayaData = 'assets/data/rahukalaya_data.json';
+  static const String annualSummaryData =
+      'assets/data/annual_summary_data.json';
+  static const String annualPredictionsData =
+      'assets/data/annual_predictions_data.json';
 }

@@ -77,13 +77,13 @@ class HomePage extends StatelessWidget {
                             itemBuilder: (context, index) {
                               List<Map<String, dynamic>> buttonData = [
                                 {
-                                  "first": "iqN",
-                                  "second": "ojia",
+                                  "first": "ixj;air",
+                                  "second": "m,dm,",
                                   "screen": AnnualSummaryScreen()
                                 },
                                 {
                                   "first": "iqN",
-                                  "second": "uqyq¾",
+                                  "second": "uqyq¾;",
                                   "screen": EventTimeScreen()
                                 },
                                 {

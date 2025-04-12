@@ -40,4 +40,6 @@ flutter:
     - assets/data/event_data.json
     - assets/data/rashi_table.json
     - assets/data/rahukalaya_data.json
+    - assets/data/annual_summary_data.json
+    - assets/data/annual_predictions_data.json
 
