@@ -125,7 +125,7 @@
       },
       {
         "title": "wl=re lshùu",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/read.svg",
         "dates": [
           {
             "day": 28,
@@ -166,7 +166,7 @@
       },
       {
         "title": "újy lghq;=",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/wedding.svg",
         "dates": [
           {
             "day": 26,
@@ -202,7 +202,7 @@
       },
       {
         "title": "fj<|dï lghq;=",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/business.svg",
         "dates": [
           {
             "day": 9,
@@ -238,7 +238,7 @@
       },
       {
         "title": "f.j,a iE§ug",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/construct.svg",
         "dates": [
           {
             "day": 15,
@@ -274,7 +274,7 @@
       },
       {
         "title": "f.g f.j§u",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/home.svg",
         "dates": [
           {
             "day": 20,
@@ -315,7 +315,7 @@
       },
       {
         "title": "ish¨ f.dú;eka jev",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/farm.svg",
         "dates": [
           {
             "day": 15,
@@ -351,7 +351,7 @@
       },
       {
         "title": "uyK lsÍu",
-        "icon": "assets/icons/feed-rice.svg",
+        "icon": "assets/icons/monk.svg",
         "dates": [
           {
             "day": 28,
