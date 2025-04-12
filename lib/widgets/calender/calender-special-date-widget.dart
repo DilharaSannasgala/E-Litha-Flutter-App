@@ -22,13 +22,13 @@ class SpecialDatesInfo extends StatelessWidget {
       ...specialDates.map((e) => _EventItem(
             date: e.day,
             month: e.month,
-            description: e.description,
+            description: e.name,
             isHoliday: false,
           )),
       ...holidays.map((e) => _EventItem(
             date: e.day,
             month: e.month,
-            description: e.description,
+            description: e.name,
             isHoliday: true,
           )),
     ]..sort((a, b) => a.date.compareTo(b.date));

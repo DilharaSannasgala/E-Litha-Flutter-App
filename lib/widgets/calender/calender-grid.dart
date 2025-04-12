@@ -134,7 +134,6 @@ class CalendarGrid extends StatelessWidget {
   Widget _buildDayCell(CalendarDay day) {
     Color textColor = AppColor.btnTextColor;
     Widget background = Container();
-    Widget? specialIndicator;
 
     if (day.isPreviousMonth || day.isNextMonth) {
       textColor = AppColor.btnTextColor.withOpacity(0.3);

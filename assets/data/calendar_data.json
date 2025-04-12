@@ -2,56 +2,384 @@
     "holidays": [
       {
         "year": 2025,
+        "month": 1,
+        "day": 14,
+        "name": "ff;fmdx.,a Èkh",
+        "description": "තෛපොංගල් දිනය අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 4,
+        "name": "ksoyia Èkh",
+        "description": "නිදහස් සැමරුම් දිනය අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 26,
+        "name": "uyd Ysjrd;%S Èkh",
+        "description": "මහ සිවරාත්‍රී දිනය අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
         "month": 3,
+        "day": 31,
+        "name": "රීදුල් ෆීතර් (රාමසාන් දිනය) අදයි...",
+        "description": "",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 13,
+        "name": "isxy, yskaÿ w¨;a wjqreÿ Èkg fmr Èk",
+        "description": "සිංහල හින්දු අලුත් අවුරුදු දිනට පෙර දින අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 14,
+        "name": "isxy, yskaÿ w¨;a wjqreÿ Èkh",
+        "description": "සිංහල හින්දු අලුත් අවුරුදු දින අදයි...",
+        "isPublicHoliday": true
+      },      {
+        "year": 2025,
+        "month": 4,
+        "day": 15,
+        "name": "úfYaI nexl= ksjdvq Èkh",
+        "description": "විශේෂ බැංකු නිවාඩු දිනකි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 18,
+        "name": "uy isl=rdod Èkh",
+        "description": "මහ සිකුරාදා දිනය අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 5,
         "day": 1,
-        "name": "New Year's Day",
-        "description": "§mdj,S Èkh",
+        "name": "f,dal lïlre Èkh",
+        "description": "ලෝක කම්කරු දිනය අදයි...",
         "isPublicHoliday": true
       },
       {
         "year": 2025,
-        "month": 3,
-        "day": 1,
-        "name": "New Year's Day",
-        "description": "§mdj,S Èkh",
+        "month": 5,
+        "day": 13,
+        "name": "fjila fmdah Èkg miq Èkh",
+        "description": "වෙසක් පෝය දිනට පසු දින...",
         "isPublicHoliday": true
       },
       {
         "year": 2025,
-        "month": 3,
-        "day": 2,
-        "name": "Maha Shivaratri",
-        "description": "§mdj,S Èkh",
+        "month": 6,
+        "day": 7,
+        "name": "Bÿ,a w,ayd W;aij Èkh",
+        "description": "ඊදුල් අල්හා (හජ්ජි උත්සව දිනය) අදයි...",
         "isPublicHoliday": true
       },
       {
         "year": 2025,
-        "month": 3,
+        "month": 9,
+        "day": 5,
+        "name": "ñ,d ÿka kì - kì kdhl;=udf.a Wmka Èkh",
+        "description": "මිලා දුන් නබි (නබි නායක තුමාගේ උපන්දිනය) අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 10,
+        "day": 20,
+        "name": "§mdj,S W;aij Èkh",
+        "description": "දීපාවලී දිනය අදයි...",
+        "isPublicHoliday": true
+      },
+      {
+        "year": 2025,
+        "month": 12,
         "day": 25,
-        "name": "Good Friday",
-        "description": "§mdj,S Èkh",
+        "name": "k;a;,a Èkh",
+        "description": "නත්තල් දිනය අදයි...",
         "isPublicHoliday": true
       }
     ],
     "moonPhases": [
       {
         "year": 2025,
+        "month": 1,
+        "day": 7,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "day": 22,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "day": 29,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 5,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 20,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 28,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
         "month": 3,
-        "day": 10,
+        "day": 6,
         "phase": "half_left",
         "name": "First Quarter"
       },
       {
         "year": 2025,
         "month": 3,
-        "day": 28,
+        "day": 22,
         "phase": "half_right",
         "name": "Last Quarter"
       },
       {
         "year": 2025,
         "month": 3,
+        "day": 29,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 5,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 21,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 28,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 5,
+        "day": 4,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "day": 20,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "day": 27,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 6,
+        "day": 3,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 6,
+        "day": 19,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 6,
         "day": 25,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 7,
+        "day": 3,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 7,
+        "day": 18,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 7,
+        "day": 25,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 8,
+        "day": 1,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 8,
+        "day": 16,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 8,
+        "day": 23,
+        "phase": "None",
+        "name": "No Moon"
+      },
+      {
+        "year": 2025,
+        "month": 8,
+        "day": 31,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+
+      {
+        "year": 2025,
+        "month": 9,
+        "day": 30,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 9,
+        "day": 14,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 9,
+        "day": 22,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 10,
+        "day": 29,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 10,
+        "day": 13,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 10,
+        "day": 21,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 11,
+        "day": 28,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 11,
+        "day": 12,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 11,
+        "day": 20,
+        "phase": "None",
+        "name": "No Moon"
+      },
+
+      {
+        "year": 2025,
+        "month": 12,
+        "day": 28,
+        "phase": "half_left",
+        "name": "First Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 12,
+        "day": 12,
+        "phase": "half_right",
+        "name": "Last Quarter"
+      },
+      {
+        "year": 2025,
+        "month": 12,
+        "day": 20,
         "phase": "None",
         "name": "No Moon"
       }
@@ -59,10 +387,87 @@
     "specialDates": [
       {
         "year": 2025,
+        "month": 1,
+        "day": 13,
+        "name": "ÿre;= mqr mif<diajl fmdfydh Èkh ",
+        "description": "දුරුතු පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "day": 12,
+        "name": "kjï mqr mif<diajl fmdfydh Èkh ",
+        "description": "නවම් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
         "month": 3,
+        "day": 13,
+        "name": "ueÈka mqr mif<diajl fmdfydh Èkh ",
+        "description": "මැදින් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 12,
+        "name": "nla mqr mif<diajl fmdfydh Èkh ",
+        "description": "බක් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "day": 12,
+        "name": "uehs mqr mif<diajl fmdfydh Èkh ",
+        "description": "වෙසක් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 6,
         "day": 10,
-        "name": "Poya Day",
-        "description": "wei< mqr mif,diajl fmdfyda Èkh"
+        "name": "fmdfidka mqr mif<diajl fmdfydh Èkh ",
+        "description": "පොසොන් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 7,
+        "day": 10,
+        "name": "wei< mqr mif<diajl fmdfydh Èkh ",
+        "description": "ඇසළ පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 8,
+        "day": 8,
+        "name": "kslsKs mqr mif<diajl fmdfydh Èkh ",
+        "description": "නිකිණි පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 9,
+        "day": 7,
+        "name": "ìkr mqr mif<diajl fmdfydh Èkh ",
+        "description": "බිනර පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 10,
+        "day": 6,
+        "name": "jma mqr mif<diajl fmdfydh Èkh ",
+        "description": "වප් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 11,
+        "day": 5,
+        "name": "b,a mqr mif<diajl fmdfydh Èkh ",
+        "description": "ඉල් පුර පසළොස්වක පොහොය දිනය අදයි..."
+      },
+      {
+        "year": 2025,
+        "month": 12,
+        "day": 4,
+        "name": "W÷jma mqr mif<diajl fmdfydh Èkh ",
+        "description": "උඳුවප් පුර පසළොස්වක පොහොය දිනය අදයි..."
       }
     ]
   }

@@ -14,19 +14,18 @@ import 'package:flutter/material.dart';
 void main() async {
   // This is required to initialize plugins before runApp
   WidgetsFlutterBinding.ensureInitialized();
-
+  
   // Initialize notification service
   await NotificationService.init();
-  NotificationService.showTestNotification();
-
+  
   // Set up the notification background action handler
   AwesomeNotifications().setListeners(
     onActionReceivedMethod: NotificationService.onActionReceivedMethod,
   );
-
-
+  
   runApp(const MainApp());
 }
+
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

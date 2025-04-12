@@ -173,9 +173,8 @@ class NotificationService {
           content: NotificationContent(
             id: _generateUniqueId(),
             channelKey: 'holiday_channel',
-            title: holiday.name,
-            body: holiday.description,
-            notificationLayout: NotificationLayout.Default,
+            title: holiday.description,
+            notificationLayout: NotificationLayout.BigText,
           ),
           schedule: NotificationCalendar(
             year: scheduledTime.year,
@@ -210,9 +209,8 @@ class NotificationService {
           content: NotificationContent(
             id: _generateUniqueId(),
             channelKey: 'special_date_channel',
-            title: specialDate.name,
-            body: specialDate.description,
-            notificationLayout: NotificationLayout.Default,
+            title: specialDate.description,
+            notificationLayout: NotificationLayout.BigText,
           ),
           schedule: NotificationCalendar(
             year: scheduledTime.year,
@@ -262,19 +260,5 @@ class NotificationService {
     // For background/terminated state handling, we could add channel-specific logic here
     // Or use a static method to save information for when the app is next opened
     print('Notification received in background: ${receivedAction.title}');
-  }
-
-  // Test notification function
-  static Future<void> showTestNotification() async {
-    await AwesomeNotifications().createNotification(
-      content: NotificationContent(
-        id: 999999,
-        channelKey: 'special_date_channel',
-        title: 'Test Notification',
-        body: 'This is a test notification to verify the system works',
-        notificationLayout: NotificationLayout.Default,
-      ),
-    );
-    print('Test notification created');
   }
 }
