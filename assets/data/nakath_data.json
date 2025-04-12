@@ -3,20 +3,65 @@
     {
       "year": 2025,
       "month": 4,
-      "day": 12,
-      "time": "12:18",
+      "day": 13,
+      "time": "08:00",
       "name": "mrK wjqreoao ioyd iakdkh",
       "description": "wfma%,a ui 13 jk bßod Èk ÈUq,am;a hqI ñY% kdkq .d iakdkh fldg bIag foaj;d wkqiaurKfhys fhÈ jdih uekú",
-      "notification": "පරණ අවුරුද්ද සඳහා ස්නානය"
+      "notification": "පරණ අවුරුද්ද සදහා ස්නානය අද දිනට යෙදී ඇත..."
     },
     {
         "year": 2025,
         "month": 4,
-        "day": 12,
-        "time": "13:19",
-        "name": "mrK wjqreoao ioyd iakdkh",
-        "description": "wfma%,a ui 13 jk bßod Èk ÈUq,am;a hqI ñY% kdkq .d iakdkh fldg bIag foaj;d wkqiaurKfhys fhÈ jdih uekú",
-        "notification": "පරණ අවුරුද්ද සඳහා ස්නානය"
+        "day": 14,
+        "time": "03:21",
+        "name": "w¨;a wjqreÿ Wodj",
+        "description": "wfma%,a ui 14 jeks i÷od Èk mQ¾j Nd. 03-21g isxy, w¨;a wjqreoao Wod fjhs-",
+        "notification": "අද දින පූර්ව භාග 03.21ට සිංහල හින්දු අලුත් අවුරුද්ද උදා වෙයි..."
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 14,
+        "time": "20:57",
+        "name": "mqKH ld,h",
+        "description": "wfma%,a ui 13 jeks bßod wmrNd. 08-57 isg miqÈk tkï 14 jeks i÷od mQ¾jNd. 09-45 olajd mqKH ld,h neúka wfma%,a ui 13 jeks bßod wmrNd. 08-57g m<uqj wdydr mdk f.k ish¨ jev w;ayer wd.ñl j;dj;aj, fh§uo mqKH ld,fha wmr fldgi tkï wfma%,a ui 14 jeks i÷od mQ¾jNd. 03-21 isg 14 jeks i÷od mQ¾jNd. 09-45 olajd my; oelafjk whqßka wdydr msiSu - jev we,a,Su - .kq fokq lsÍu yd wdydr wkqNjh wd§ kele;a pdß;% úê bgq lsÍu uekú-",
+        "notification": "අද දින අපරභාග 08.57 සිට පසු දින 09.45 දක්වා පුණ්‍ය කාලය වේ..."
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 14,
+        "time": "04:04",
+        "name": "wdydr msiSu",
+        "description": "wfma%,a ui 14 jeks i÷od mQ¾jNd. 04-04g ;U j¾K jia;%dNrKfhka ieriS ol=Kq ÈYdj n, <sma ne| .sks fud<jd lsßn;lao leú,s j¾.hlao § lsß iy ú,|o ms,sfh, lr .ekSu uekú-",
+        "notification": "අද දින පූර්වභාග 04.04ට ආහාර පිසීමේ නැකත යෙදී ඇත..."
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 14,
+        "time": "06:44",
+        "name": "jev we,a,Su - .kqfokq lsÍu yd wdydr wkqNjh",
+        "description": "wfma%,a ui 14 jeks i÷od mQ¾jNd. 06-44g uq;= yd Yafõ; j¾K jia;%dNrKfhka ieriS ol=Kq ÈYdj n,d ish¨ jev w,a,d .kqfokq fldg wdydr wkqNj lsÍu uekú-",
+        "notification": "අද දින පූර්වභාග 06-44ට වැඩ ඇල්ලීම, ගනුදෙනු කිරීම හා ආහර අනුභවය යෙදී ඇත..."
+      },      
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 16,
+        "time": "09:04",
+        "name": "ysif;,a .Eu",
+        "description": "wfma%,a ui 16 jeks nodod mQ¾jNd. 09-04g mÉp j¾K fyj;a fld< meye;s jia;%dNrKfhka ieriS W;=re ÈYdj n,d ysig fldfydU m;ao mhg fldf<dka m;ao ;nd fldfydU m;a hqI ñY% kdkq yd f;,a .d iakdkh lsÍu uekú-",
+        "notification": "අද දින පූර්වභාග 09.04ට හිසතෙල් ගෑමේ නැකත යෙදී ඇත..."
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "day": 17,
+        "time": "09:03",
+        "name": "/lSrlaId i|yd msg;aj hEu",
+        "description": "wfma%,a ui 17 jeks n%yiam;skaod mQ¾jNd. 09-03g rkajka meye;s jia;%dNrKfhka ieriS lsßn;la yd t<lsß ñY% leú,s j¾.hla wkqNj lr W;=re ÈYdj n,d msg;aj hEu uekú-",
+        "notification": "අද දින පූර්වභාග 09.03ට රැකීරක්ෂා සඳහා පිටත්ව යෑමෙ නැකත යෙදී ඇත... "
       }
   ]
 }
