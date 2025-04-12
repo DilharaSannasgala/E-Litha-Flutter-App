@@ -70,6 +70,51 @@ class _NakathScreenState extends State<NakathScreen> {
             color: AppColor.btnTextColor,
           ),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline, color: AppColor.btnTextColor),
+            tooltip: 'Info',
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16)),
+                  backgroundColor: Colors.white,
+                  title: Text(
+                    "ie,lsh hq;=",
+                    style: TextStyle(
+                      fontFamily: AppComponents.accentFont,
+                      fontSize: 20,
+                      color: AppColor.btnTextColor,
+                    ),
+                  ),
+                  content: Text(
+                    "fuu kele;a fõ,djka oekg iïu; Trf,daiq fõ,dfjka ilia lr we;s w;r fuu fõ,djka Y%S ,xldfõ ish¨ m%foaYj,g fkdfjkiaj Ndú; l, yelsh-",
+                    style: TextStyle(
+                      fontFamily: AppComponents.accentFont,
+                      fontSize: 16,
+                      color: AppColor.btnSubTextColor,
+                      height: 1.4,
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.of(context).pop(),
+                      child: Text(
+                        "jikak",
+                        style: TextStyle(
+                          color: AppColor.btnTextColor,
+                          fontFamily: AppComponents.accentFont,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: isLoading
           ? const Center(
@@ -87,4 +132,3 @@ class _NakathScreenState extends State<NakathScreen> {
     );
   }
 }
-
