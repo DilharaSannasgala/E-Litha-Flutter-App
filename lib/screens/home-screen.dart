@@ -1,3 +1,4 @@
+import 'package:e_litha/screens/annual-summary-screen.dart';
 import 'package:e_litha/screens/event-time-screen.dart';
 import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
@@ -78,7 +79,7 @@ class HomePage extends StatelessWidget {
                                 {
                                   "first": "iqN",
                                   "second": "ojia",
-                                  "screen": EventTimeScreen()
+                                  "screen": AnnualSummaryScreen()
                                 },
                                 {
                                   "first": "iqN",
