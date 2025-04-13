@@ -31,5 +31,5 @@ flutter run
 ```
 
 ### 📦 Download APK
-[Download Latest APK](https://bit.ly/42ynGks)
+[Download Latest APK](https://mega.nz/file/GjQF3D4b#esTHRtjHuF6OUtrCzr-3T8ccb09Aq5UgZCPTW-94o1Y)
 
