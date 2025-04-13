@@ -16,6 +16,8 @@ class EventTimeScreen extends StatefulWidget {
 class _EventTimeScreenState extends State<EventTimeScreen> {
   List<EventTimeInfo> eventTimes = [];
   bool isLoading = false;
+  
+  final double maxTabletWidth = 700.0;
 
   @override
   void initState() {
@@ -71,21 +73,24 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
           ),
         ),
       ),
-      body: isLoading
-          ? const Center(
-              child: CircularProgressIndicator(color: AppColor.accentColor))
-          : SafeArea(
-              child: ListView.builder(
-                padding: const EdgeInsets.all(16),
-                itemCount: eventTimes.length,
-                itemBuilder: (context, index) {
-                  return CollapsibleEventCard(
-                    eventTimeInfo: eventTimes[index],
-                  );
-                },
-              ),
-            ),
+      body: Center(
+        child: Container(
+          constraints: BoxConstraints(maxWidth: maxTabletWidth),
+          child: isLoading
+              ? const CircularProgressIndicator(color: AppColor.accentColor)
+              : SafeArea(
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(16),
+                    itemCount: eventTimes.length,
+                    itemBuilder: (context, index) {
+                      return CollapsibleEventCard(
+                        eventTimeInfo: eventTimes[index],
+                      );
+                    },
+                  ),
+                ),
+        ),
+      ),
     );
   }
 }
-

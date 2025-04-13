@@ -21,7 +21,14 @@ class CalendarGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get screen orientation and dimensions
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Container(
+      width:
+          isLandscape ? screenWidth * 0.95 : null, // Adjust width for landscape
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -41,12 +48,15 @@ class CalendarGrid extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             _buildWeekdayRow(),
-            SizedBox(height: 16),
-            _buildDaysGrid(),
+            SizedBox(height: 8),
+            Flexible(
+              child: _buildDaysGrid(context),
+            ),
           ],
         ),
       ),
@@ -65,7 +75,7 @@ class CalendarGrid extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontFamily: AppComponents.accentFont,
-                    fontSize: 18,
+                    fontSize: 16,
                     color: AppColor.btnTextColor,
                     fontWeight: FontWeight.bold,
                   ),
@@ -75,7 +85,11 @@ class CalendarGrid extends StatelessWidget {
     );
   }
 
-  Widget _buildDaysGrid() {
+  Widget _buildDaysGrid(BuildContext context) {
+    // Get screen orientation
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
+
     final DateTime firstDayOfMonth = DateTime(year, month + 1, 1);
     final int daysInMonth = DateTime(year, month + 2, 0).day;
     final int startWeekday =
@@ -116,19 +130,26 @@ class CalendarGrid extends StatelessWidget {
       ...nextMonthDays.map((day) => CalendarDay(day, isNextMonth: true)),
     ];
 
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 7,
-        childAspectRatio: 1.0,
-      ),
-      itemCount: allDays.length,
-      itemBuilder: (context, index) {
-        final day = allDays[index];
-        return _buildDayCell(day);
-      },
-    );
+    // Use a different aspect ratio for landscape mode
+    final childAspectRatio = isLandscape ? 2.0 : 1.0;
+
+    return LayoutBuilder(builder: (context, constraints) {
+      return GridView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 7,
+          childAspectRatio: childAspectRatio,
+          mainAxisSpacing: 1,
+          crossAxisSpacing: 1,
+        ),
+        itemCount: allDays.length,
+        itemBuilder: (context, index) {
+          final day = allDays[index];
+          return _buildDayCell(day);
+        },
+      );
+    });
   }
 
   Widget _buildDayCell(CalendarDay day) {
@@ -139,51 +160,76 @@ class CalendarGrid extends StatelessWidget {
       textColor = AppColor.btnTextColor.withOpacity(0.3);
     }
 
-    if (day.isToday) {
-      background = Container(
-          decoration: BoxDecoration(
-        color: AppColor.btnTextColor,
-        borderRadius: BorderRadius.circular(12),
-      ));
-      textColor = Colors.white;
-    }
-
-    // Add orange circle for special dates
-    if (day.isSpecialDay) {
-      background = Container(
-          decoration: BoxDecoration(
-        color: AppColor.accentColor,
-        borderRadius: BorderRadius.circular(360),
-      ));
-      textColor = Colors.white;
-    }
-
-    // Add orange circle border for holidays
-    if (day.isHoliday) {
+    // Handle combinations of today, holiday, and special day
+    if (day.isToday && day.isHoliday) {
+      // When today is also a holiday
       background = Container(
         decoration: BoxDecoration(
-          border: Border.all(color: AppColor.accentColor, width: 5),
+          color: AppColor.btnTextColor,
+          border: Border.all(color: AppColor.accentColor, width: 3),
           shape: BoxShape.circle,
         ),
       );
+      textColor = Colors.white;
+    } else if (day.isToday && day.isSpecialDay) {
+      // When today is also a special day
+      background = Container(
+        decoration: BoxDecoration(
+          color: AppColor.accentColor,
+          border: Border.all(color: AppColor.btnTextColor, width: 3),
+          shape: BoxShape.circle,
+        ),
+      );
+      textColor = Colors.white;
+    } else if (day.isToday) {
+      // Just today
+      background = Container(
+        decoration: BoxDecoration(
+          color: AppColor.btnTextColor,
+          shape: BoxShape.circle,
+        ),
+      );
+      textColor = Colors.white;
+    } else if (day.isHoliday) {
+      // Just holiday
+      background = Container(
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColor.accentColor, width: 3),
+          shape: BoxShape.circle,
+        ),
+      );
+    } else if (day.isSpecialDay) {
+      // Just special day
+      background = Container(
+        decoration: BoxDecoration(
+          color: AppColor.accentColor,
+          shape: BoxShape.circle,
+        ),
+      );
+      textColor = Colors.white;
     }
 
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        background,
-        Text(
-          day.day.toString(),
-          style: TextStyle(
-            color: textColor,
-            fontSize: 16,
-            fontWeight: day.isToday || day.isSpecialDay
-                ? FontWeight.bold
-                : FontWeight.normal,
-            fontFamily: AppComponents.accentFont,
-          ),
+    return Center(
+      child: AspectRatio(
+        aspectRatio: 1.0,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            background,
+            Text(
+              day.day.toString(),
+              style: TextStyle(
+                color: textColor,
+                fontSize: 14,
+                fontWeight: day.isToday || day.isSpecialDay || day.isHoliday
+                    ? FontWeight.bold
+                    : FontWeight.normal,
+                fontFamily: AppComponents.accentFont,
+              ),
+            ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

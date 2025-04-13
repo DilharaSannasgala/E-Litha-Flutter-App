@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class NotificationService {
   // Initialize notification plugin
   static Future<void> init() async {
-    String? iconPath = null; // Use null to let awesome_notifications use the default app icon
+    String? iconPath = 'resource://drawable/notification_icon';
 
     try {
       await AwesomeNotifications().initialize(
@@ -117,8 +117,9 @@ class NotificationService {
           content: NotificationContent(
             id: _generateUniqueId(),
             channelKey: 'nakath_channel',
-            title: "${nakath.notification} ආරම්භය...",
+            title: nakath.notification,
             notificationLayout: NotificationLayout.BigText,
+            icon: 'resource://drawable/notification_icon',
           ),
           schedule: NotificationCalendar(
             year: scheduledTime.year,
@@ -137,8 +138,9 @@ class NotificationService {
           content: NotificationContent(
             id: _generateUniqueId(),
             channelKey: 'nakath_channel',
-            title: '${nakath.notification} ${nakath.time}ට යෙදී ඇත...',
+            title: nakath.notification,
             notificationLayout: NotificationLayout.BigText,
+            icon: 'resource://drawable/notification_icon',
           ),
           schedule: NotificationCalendar(
             year: reminderTime.year,
@@ -175,6 +177,7 @@ class NotificationService {
             channelKey: 'holiday_channel',
             title: holiday.description,
             notificationLayout: NotificationLayout.BigText,
+            icon: 'resource://drawable/notification_icon',
           ),
           schedule: NotificationCalendar(
             year: scheduledTime.year,
@@ -211,6 +214,7 @@ class NotificationService {
             channelKey: 'special_date_channel',
             title: specialDate.description,
             notificationLayout: NotificationLayout.BigText,
+            icon: 'resource://drawable/notification_icon',
           ),
           schedule: NotificationCalendar(
             year: scheduledTime.year,

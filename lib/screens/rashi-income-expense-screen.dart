@@ -16,6 +16,8 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
   List<List<String>> tableData = [];
   bool isLoading = true;
 
+  final double maxTabletWidth = 800.0;
+
   @override
   void initState() {
     super.initState();
@@ -62,49 +64,55 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
         ),
       ),
       body: isLoading
-          ?  Center(child: CircularProgressIndicator(color: AppColor.accentColor,))
-          : SafeArea(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
-                            blurRadius: 8,
-                            offset: const Offset(0, 3),
-                          ),
-                        ],
-                        border: Border.all(
-                          color: AppColor.borderLightColor,
-                          width: 2,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            RashiTableWidget(tableData: tableData),
-                            const SizedBox(height: 20),
-                            Text(
-                              'rdYs wh jeh u.ska fuu jifr Tnf.a rdYshg wkqj wh jeh fmkajhs',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: AppComponents.accentFont,
-                                color: AppColor.btnSubTextColor,
-                                height: 1.5,
+          ? CircularProgressIndicator(color: AppColor.accentColor)
+          : Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                constraints: BoxConstraints(maxWidth: maxTabletWidth),
+                child: SafeArea(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.05),
+                                blurRadius: 8,
+                                offset: const Offset(0, 3),
                               ),
-                              textAlign: TextAlign.center,
+                            ],
+                            border: Border.all(
+                              color: AppColor.borderLightColor,
+                              width: 2,
                             ),
-                          ],
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              children: [
+                                RashiTableWidget(tableData: tableData),
+                                const SizedBox(height: 20),
+                                Text(
+                                  'rdYs wh jeh u.ska fuu jifr Tnf.a rdYshg wkqj wh jeh fmkajhs',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontFamily: AppComponents.accentFont,
+                                    color: AppColor.btnSubTextColor,
+                                    height: 1.5,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
+                  ),
                 ),
               ),
             ),

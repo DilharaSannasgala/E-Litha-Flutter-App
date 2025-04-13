@@ -18,6 +18,8 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
   late List<AnnualPredictionModel> predictionsData;
   bool isLoading = true;
   String? errorMessage;
+  
+  final double maxTabletWidth = 700.0;
 
   @override
   void initState() {
@@ -73,28 +75,30 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
         ),
       ),
       body: SafeArea(
-        child: isLoading
-            ? const Center(
-                child: CircularProgressIndicator(
-                color: AppColor.accentColor,
-              ))
-            : errorMessage != null
-                ? Center(
-                    child: Text(
-                      errorMessage!,
-                      style: const TextStyle(color: Colors.red),
-                    ),
+        child: Center(
+          child: Container(
+            constraints: BoxConstraints(maxWidth: maxTabletWidth),
+            child: isLoading
+                ? const CircularProgressIndicator(
+                    color: AppColor.accentColor,
                   )
-                : SingleChildScrollView(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      children: [
-                        _buildSummarySection(),
-                        const SizedBox(height: 20),
-                        _buildPredictionsSection(),
-                      ],
-                    ),
-                  ),
+                : errorMessage != null
+                    ? Text(
+                        errorMessage!,
+                        style: const TextStyle(color: Colors.red),
+                      )
+                    : SingleChildScrollView(
+                        padding: const EdgeInsets.all(16),
+                        child: Column(
+                          children: [
+                            _buildSummarySection(),
+                            const SizedBox(height: 20),
+                            _buildPredictionsSection(),
+                          ],
+                        ),
+                      ),
+          ),
+        ),
       ),
     );
   }

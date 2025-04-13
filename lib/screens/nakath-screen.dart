@@ -17,6 +17,9 @@ class NakathScreen extends StatefulWidget {
 class _NakathScreenState extends State<NakathScreen> {
   List<SpecialNakathDateInfo> specialDates = [];
   bool isLoading = true;
+  
+  // Define maximum tablet vertical width
+  final double maxTabletWidth = 700.0;
 
   @override
   void initState() {
@@ -116,19 +119,23 @@ class _NakathScreenState extends State<NakathScreen> {
           ),
         ],
       ),
-      body: isLoading
-          ? const Center(
-              child: CircularProgressIndicator(color: AppColor.accentColor))
-          : SafeArea(
-              child: ListView.builder(
-                padding: const EdgeInsets.all(16),
-                itemCount: specialDates.length,
-                itemBuilder: (context, index) {
-                  return CollapsibleNakathCard(
-                      specialDate: specialDates[index]);
-                },
-              ),
-            ),
+      body: Center(
+        child: Container(
+          constraints: BoxConstraints(maxWidth: maxTabletWidth),
+          child: isLoading
+              ? const CircularProgressIndicator(color: AppColor.accentColor)
+              : SafeArea(
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(16),
+                    itemCount: specialDates.length,
+                    itemBuilder: (context, index) {
+                      return CollapsibleNakathCard(
+                          specialDate: specialDates[index]);
+                    },
+                  ),
+                ),
+        ),
+      ),
     );
   }
 }

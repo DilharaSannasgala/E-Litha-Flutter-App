@@ -17,6 +17,9 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> {
   List<RahuKalayaModel> rahuKalayaData = [];
   bool isLoading = true;
   String? errorMessage;
+  
+  // Define maximum tablet vertical width
+  final double maxTabletWidth = 800.0;
 
   @override
   void initState() {
@@ -65,64 +68,65 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> {
           ),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
-                      blurRadius: 8,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                  border: Border.all(
-                    color: AppColor.borderLightColor,
-                    width: 2,
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    children: [
-                      if (isLoading)
-                         Center(
-                          child: CircularProgressIndicator(color: AppColor.accentColor),
-                        )
-                      else if (errorMessage != null)
-                        Center(
-                          child: Text(
-                            errorMessage!,
-                            style: const TextStyle(color: Colors.red),
-                          ),
-                        )
-                      else
-                        RahuKalayaTableWidget(rahuKalayaData: rahuKalayaData),
-                      const SizedBox(height: 20),
-                      Text(
-                        'rdyq ld,h ;=, f.oßka msgùu - hula wdrïN lsÍu - YqN jev weröu - m%;sldr wdrïNh wdÈh kqiqÿiqh - iQ¾hQoh wkqj ilia lr.kak - Èjd rd;%S folgu tlfiah ',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontFamily: AppComponents.accentFont,
-                          color: AppColor.btnSubTextColor,
-                          height: 1.5,
+      body: Align(
+        alignment: Alignment.topCenter,
+        child: Container(
+          constraints: BoxConstraints(maxWidth: maxTabletWidth),
+          child: SafeArea(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(16),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
                         ),
-                        textAlign: TextAlign.justify,
+                      ],
+                      border: Border.all(
+                        color: AppColor.borderLightColor,
+                        width: 2,
                       ),
-                    ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          if (isLoading)
+                            CircularProgressIndicator(color: AppColor.accentColor)
+                          else if (errorMessage != null)
+                            Text(
+                              errorMessage!,
+                              style: const TextStyle(color: Colors.red),
+                            )
+                          else
+                            RahuKalayaTableWidget(rahuKalayaData: rahuKalayaData),
+                          const SizedBox(height: 20),
+                          Text(
+                            'rdyq ld,h ;=, f.oßka msgùu - hula wdrïN lsÍu - YqN jev weröu - m%;sldr wdrïNh wdÈh kqiqÿiqh - iQ¾hQoh wkqj ilia lr.kak - Èjd rd;%S folgu tlfiah ',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontFamily: AppComponents.accentFont,
+                              color: AppColor.btnSubTextColor,
+                              height: 1.5,
+                            ),
+                            textAlign: TextAlign.justify,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-

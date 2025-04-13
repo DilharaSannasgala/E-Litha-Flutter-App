@@ -79,30 +79,29 @@ class HomePage extends StatelessWidget {
                                 {
                                   "first": "ixj;air",
                                   "second": "m,dm,",
-                                  "screen": AnnualSummaryScreen()
+                                  "route": "/summary"
                                 },
                                 {
                                   "first": "iqN",
                                   "second": "uqyq¾;",
-                                  "screen": EventTimeScreen()
+                                  "route": "/eventTimes"
                                 },
                                 {
                                   "first": "rdyq",
                                   "second": "ld,h",
-                                  "screen": RahuKalayaScreen()
+                                  "route": "/rahukalaya"
                                 },
                                 {
                                   "first": "rdYs",
                                   "second": "wh jeh",
-                                  "screen": RashiTableScreen()
+                                  "route": "/rashiIncomeExpense"
                                 },
                               ];
-
                               return buildSunButton(
                                 context,
                                 buttonData[index]["first"],
                                 buttonData[index]["second"],
-                                buttonData[index]["screen"],
+                                buttonData[index]["route"],
                               );
                             }),
                       ],

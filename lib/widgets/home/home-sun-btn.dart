@@ -3,7 +3,7 @@ import 'package:e_litha/utils/app-component.dart';
 import 'package:flutter/material.dart';
 
 Widget buildSunButton(
-   BuildContext context, String firstLine, String secondLine, Widget screen) {
+   BuildContext context, String firstLine, String secondLine, String routeName) {
   return Container(
     decoration: BoxDecoration(
       image: DecorationImage(
@@ -30,12 +30,7 @@ Widget buildSunButton(
       color: Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => screen),
-          );
-        },
+        onTap: () => Navigator.pushNamed(context, routeName),
         child: Padding(
           padding: const EdgeInsets.only(left: 18.0),
           child: Row(

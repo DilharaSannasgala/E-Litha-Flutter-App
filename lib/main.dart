@@ -4,6 +4,8 @@ import 'package:e_litha/screens/event-time-screen.dart';
 import 'package:e_litha/screens/home-screen.dart';
 import 'package:e_litha/screens/loading-screen.dart';
 import 'package:e_litha/screens/nakath-screen.dart';
+import 'package:e_litha/screens/annual-summary-screen.dart';
+import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
 import 'package:e_litha/services/notification_service.dart';
 import 'package:flutter/material.dart';
@@ -26,19 +28,24 @@ void main() async {
   runApp(const MainApp());
 }
 
-
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'E-Litha', initialRoute: '/', routes: {
+    return MaterialApp(
+      title: 'E-Litha',
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
       '/': (context) => const LoadingScreen(),
       '/home': (context) => HomePage(),
       '/calendar': (context) => CalendarScreen(),
       '/nakath': (context) => const NakathScreen(),
       '/eventTimes' : (context) => const EventTimeScreen(),
       '/rashiIncomeExpense': (context) => const RashiTableScreen(),
+      '/rahukalaya': (context) => const RahuKalayaScreen(),
+      '/summary' : (context) => const AnnualSummaryScreen()
     });
   }
 }

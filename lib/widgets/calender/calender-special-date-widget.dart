@@ -31,24 +31,33 @@ class SpecialDatesInfo extends StatelessWidget {
             description: e.name,
             isHoliday: true,
           )),
-    ]..sort((a, b) => a.date.compareTo(b.date));
+    ]..sort((a, b) => a.month == b.month 
+        ? a.date.compareTo(b.date) 
+        : a.month.compareTo(b.month));
 
     if (allEvents.isEmpty) {
       return SizedBox.shrink();
     }
 
-    return Column(
-      children: [
-        for (final event in allEvents) ...[
-          SpecialDateCard(
-            date: event.date.toString(),
-            month: event.month,
-            description: event.description,
-            isHoliday: event.isHoliday,
-          ),
-          SizedBox(height: 10),
-        ],
-      ],
+    // Make the list scrollable using ListView.builder
+    return Flexible(
+      child: ListView.builder(
+        itemCount: allEvents.length,
+        shrinkWrap: true,
+        padding: EdgeInsets.only(bottom: 10),
+        itemBuilder: (context, index) {
+          final event = allEvents[index];
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: SpecialDateCard(
+              date: event.date.toString(),
+              month: event.month,
+              description: event.description,
+              isHoliday: event.isHoliday,
+            ),
+          );
+        },
+      ),
     );
   }
 }
@@ -83,6 +92,10 @@ class SpecialDateCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get screen size to handle text overflow
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
+    
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -105,6 +118,7 @@ class SpecialDateCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: 60,
@@ -148,11 +162,14 @@ class SpecialDateCard extends StatelessWidget {
                   Text(
                     description,
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: isLandscape ? 24 : 20,
                       fontFamily: AppComponents.accentFont,
                       color: AppColor.btnTextColor,
                     ),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
                   ),
+                  
                 ],
               ),
             ),
