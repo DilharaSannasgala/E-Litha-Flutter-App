@@ -42,3 +42,4 @@ flutter:
     - assets/data/rahukalaya_data.json
     - assets/data/annual_summary_data.json
     - assets/data/annual_predictions_data.json
+    - assets/data/subha_dawasa_data.json

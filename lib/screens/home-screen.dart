@@ -82,8 +82,8 @@ class HomePage extends StatelessWidget {
                                 },
                                 {
                                   "first": "iqN",
-                                  "second": "uqyq¾;",
-                                  "route": "/eventTimes"
+                                  "second": "ojia",
+                                  "route": "/subhaDawasa"
                                 },
                                 {
                                   "first": "rdyq",

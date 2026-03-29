@@ -7,6 +7,7 @@ import 'package:e_litha/screens/nakath-screen.dart';
 import 'package:e_litha/screens/annual-summary-screen.dart';
 import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
+import 'package:e_litha/screens/subha-dawasa-screen.dart';
 import 'package:e_litha/services/notification_service.dart';
 import 'package:flutter/material.dart';
 
@@ -43,6 +44,7 @@ class MainApp extends StatelessWidget {
       '/calendar': (context) => CalendarScreen(),
       '/nakath': (context) => const NakathScreen(),
       '/eventTimes' : (context) => const EventTimeScreen(),
+      '/subhaDawasa' : (context) => const SubhaDawasaScreen(),
       '/rashiIncomeExpense': (context) => const RashiTableScreen(),
       '/rahukalaya': (context) => const RahuKalayaScreen(),
       '/summary' : (context) => const AnnualSummaryScreen()

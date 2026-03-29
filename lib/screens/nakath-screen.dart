@@ -66,7 +66,7 @@ class _NakathScreenState extends State<NakathScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "kele;a iSÜgqj - 2025",
+          "kele;a iSÜgqj - 2026",
           style: TextStyle(
             fontSize: 25,
             fontFamily: AppComponents.accentFont,

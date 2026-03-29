@@ -30,4 +30,6 @@ class AppComponents {
       'assets/data/annual_summary_data.json';
   static const String annualPredictionsData =
       'assets/data/annual_predictions_data.json';
+  static const String subhaDawasaData =
+      'assets/data/subha_dawasa_data.json';
 }
