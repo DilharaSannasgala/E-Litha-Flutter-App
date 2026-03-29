@@ -1,4 +1,3 @@
-import 'package:e_litha/screens/annual-summary-screen.dart';
 import 'package:e_litha/screens/event-time-screen.dart';
 import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
@@ -46,7 +45,7 @@ class HomePage extends StatelessWidget {
                         calenderButton(
                           context,
                           textTitle: 'Èk o¾Ykh',
-                          textYear: "2025",
+                          textYear: "2026",
                           onPressed: () {
                             Navigator.pushNamed(context, '/calendar');
                           },

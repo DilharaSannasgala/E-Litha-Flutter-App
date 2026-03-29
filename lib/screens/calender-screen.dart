@@ -126,9 +126,12 @@ class _CalendarScreenState extends State<CalendarScreen>
           curve: Curves.easeInOut,
         );
       } else {
-        currentMonth = 11;
-        currentYear--;
-        _pageController.jumpToPage(currentMonth);
+        // Lock to 2026 only - don't go to previous year
+        if (currentYear > 2026) {
+          currentMonth = 11;
+          currentYear--;
+          _pageController.jumpToPage(currentMonth);
+        }
       }
     });
     _animationController.forward();
@@ -145,9 +148,12 @@ class _CalendarScreenState extends State<CalendarScreen>
           curve: Curves.easeInOut,
         );
       } else {
-        currentMonth = 0;
-        currentYear++;
-        _pageController.jumpToPage(currentMonth);
+        // Lock to 2026 only - don't go to next year
+        if (currentYear < 2026) {
+          currentMonth = 0;
+          currentYear++;
+          _pageController.jumpToPage(currentMonth);
+        }
       }
     });
     _animationController.forward();
@@ -312,9 +318,10 @@ class _CalendarScreenState extends State<CalendarScreen>
                 controller: _pageController,
                 onPageChanged: (int page) {
                   setState(() {
-                    if ((currentMonth == 11 && page == 0)) {
+                    // Lock to 2026 only - prevent year changes via swipe
+                    if ((currentMonth == 11 && page == 0) && currentYear < 2026) {
                       currentYear++;
-                    } else if ((currentMonth == 0 && page == 11)) {
+                    } else if ((currentMonth == 0 && page == 11) && currentYear > 2026) {
                       currentYear--;
                     }
                     currentMonth = page;
@@ -396,10 +403,10 @@ class _CalendarScreenState extends State<CalendarScreen>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              "No special dates for this month",
+              "fï udifha úfYaI Èk fkdue;",
               style: TextStyle(
-                fontFamily: AppComponents.accentFont,
                 fontSize: 18,
+                fontFamily: AppComponents.accentFont,
                 color: AppColor.btnTextColor.withOpacity(0.7),
               ),
             ),
