@@ -11,6 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.17
+  google_fonts: ^8.0.2
 
 dev_dependencies:
   flutter_test:
@@ -19,18 +20,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  fonts:
-    - family: AccentFont
-      fonts:
-        - asset: assets/fonts/accent-font.ttf
-
-    - family: TitleFont
-      fonts:
-        - asset: assets/fonts/title-font.ttf
-
-    - family: SubTextFont
-      fonts:
-        - asset: assets/fonts/sub-font.ttf
 
   assets:
     - assets/images/

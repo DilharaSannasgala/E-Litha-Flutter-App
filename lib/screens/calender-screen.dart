@@ -171,10 +171,10 @@ class _CalendarScreenState extends State<CalendarScreen>
       backgroundColor: AppColor.bgColor,
       appBar: AppBar(
         title: Text(
-          "Èk o¾Ykh - $currentYear",
+          "දින දර්ශනය - $currentYear",
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),
@@ -403,10 +403,10 @@ class _CalendarScreenState extends State<CalendarScreen>
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
-              "fï udifha úfYaI Èk fkdue;",
+              "මේ මාසයේ විශේෂ දින නොමැත",
               style: TextStyle(
                 fontSize: 18,
-                fontFamily: AppComponents.accentFont,
+                
                 color: AppColor.btnTextColor.withOpacity(0.7),
               ),
             ),

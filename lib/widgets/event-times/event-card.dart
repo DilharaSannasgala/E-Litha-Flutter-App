@@ -125,7 +125,7 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
                                 widget.eventTimeInfo.title,
                                 style: const TextStyle(
                                   fontSize: 24,
-                                  fontFamily: AppComponents.accentFont,
+                                  
                                   fontWeight: FontWeight.w400,
                                   color: AppColor.btnTextColor,
                                   height: 1.2,

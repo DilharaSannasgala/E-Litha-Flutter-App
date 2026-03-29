@@ -3,6 +3,8 @@ import 'package:e_litha/models/rahukalaya-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/widgets/rahukalaya/rahukalaya-table-widget.dart';
+import 'package:e_litha/widgets/rahukalaya/maru-sitina-disawa-widget.dart';
+import 'package:e_litha/widgets/rahukalaya/kala-horawa-widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -60,10 +62,10 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'rdyq ld,h - 2025',
+          'රාහු කාලය - 2025',
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),
@@ -108,15 +110,37 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> {
                             RahuKalayaTableWidget(rahuKalayaData: rahuKalayaData),
                           const SizedBox(height: 20),
                           Text(
-                            'rdyq ld,h ;=, f.oßka msgùu - hula wdrïN lsÍu - YqN jev weröu - m%;sldr wdrïNh wdÈh kqiqÿiqh - iQ¾hQoh wkqj ilia lr.kak - Èjd rd;%S folgu tlfiah ',
+                            'රාහු කාලය තුල ගෙදරින් පිටවීම - යමක් ආරම්භ කිරීම - ශුභ වැඩ ඇරඹීම - ප‍්‍රතිකාර ආරම්භය ආදිය නුසුදුසුය - සූර්යූදය අනුව සකස් කරගන්න - දිවා රාත‍්‍රී දෙකටම එකසේය ',
                             style: TextStyle(
                               fontSize: 16,
-                              fontFamily: AppComponents.accentFont,
+                              
                               color: AppColor.btnSubTextColor,
                               height: 1.5,
                             ),
                             textAlign: TextAlign.justify,
                           ),
+                          const SizedBox(height: 30),
+                          const Text(
+                            'සත් දිනට මරු සිටින දිසාව',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: AppColor.btnTextColor,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          const MaruSitinaDisawaWidget(),
+                          const SizedBox(height: 30),
+                          const Text(
+                            'කාල හෝරාව',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: AppColor.btnTextColor,
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          const KalaHorawaWidget(),
                         ],
                       ),
                     ),

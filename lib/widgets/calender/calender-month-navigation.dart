@@ -54,7 +54,7 @@ class MonthNavigation extends StatelessWidget {
               month,
               style: TextStyle(
                 fontSize: 18,
-                fontFamily: AppComponents.accentFont,
+                
                 color: AppColor.btnTextColor,
               ),
             ),

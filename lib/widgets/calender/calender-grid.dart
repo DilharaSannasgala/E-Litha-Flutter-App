@@ -64,7 +64,7 @@ class CalendarGrid extends StatelessWidget {
   }
 
   Widget _buildWeekdayRow() {
-    final List<String> weekdays = ['b', 'i', 'wÕ', 'n', 'n%y', 'is', 'fi'];
+    final List<String> weekdays = ['ඉ', 'ස', 'අඟ', 'බ', 'බ්‍රහ', 'සි', 'සෙ'];
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -74,7 +74,7 @@ class CalendarGrid extends StatelessWidget {
                   day,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: AppComponents.accentFont,
+                    
                     fontSize: 16,
                     color: AppColor.btnTextColor,
                     fontWeight: FontWeight.bold,
@@ -224,7 +224,7 @@ class CalendarGrid extends StatelessWidget {
                 fontWeight: day.isToday || day.isSpecialDay || day.isHoliday
                     ? FontWeight.bold
                     : FontWeight.normal,
-                fontFamily: AppComponents.accentFont,
+                
               ),
             ),
           ],

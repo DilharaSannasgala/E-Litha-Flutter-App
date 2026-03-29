@@ -55,10 +55,10 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'rdYs wh jeh',
+          'රාශි අය වැය (2026/27)',
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),
@@ -97,10 +97,10 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
                                 RashiTableWidget(tableData: tableData),
                                 const SizedBox(height: 20),
                                 Text(
-                                  'rdYs wh jeh u.ska fuu jifr Tnf.a rdYshg wkqj wh jeh fmkajhs',
+                                  'රාශි අය වැය මගින් මෙම වසරෙ ඔබගේ රාශියට අනුව අය වැය පෙන්වයි',
                                   style: TextStyle(
                                     fontSize: 18,
-                                    fontFamily: AppComponents.accentFont,
+                                    
                                     color: AppColor.btnSubTextColor,
                                     height: 1.5,
                                   ),

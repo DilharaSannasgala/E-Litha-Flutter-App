@@ -65,10 +65,10 @@ class _SubhaDawasaScreenState extends State<SubhaDawasaScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'iqN ojia - 2026',
+          'සුභ දවස් - 2026',
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),

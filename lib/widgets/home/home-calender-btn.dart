@@ -58,7 +58,7 @@ Widget calenderButton(
                         textTitle,
                         style: TextStyle(
                           color: Colors.white,
-                          fontFamily: AppComponents.accentFont,
+                          
                           fontSize: 24,
                           height: 1.0,
                         ),
@@ -68,7 +68,7 @@ Widget calenderButton(
                         textYear,
                         style: TextStyle(
                           color: Colors.white,
-                          fontFamily: AppComponents.accentFont,
+                          
                           fontSize: 40,
                           height: 1.0,
                         ),

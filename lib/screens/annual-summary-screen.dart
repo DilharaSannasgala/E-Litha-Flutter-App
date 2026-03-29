@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:e_litha/models/annual-prediction-model.dart';
 import 'package:e_litha/models/annual-summary-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
@@ -15,7 +14,6 @@ class AnnualSummaryScreen extends StatefulWidget {
 
 class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
   late AnnualSummaryModel summaryData;
-  late List<AnnualPredictionModel> predictionsData;
   bool isLoading = true;
   String? errorMessage;
   
@@ -33,16 +31,8 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
           await rootBundle.loadString(AppComponents.annualSummaryData);
       final Map<String, dynamic> summaryJson = json.decode(summaryJsonString);
 
-      final String predictionsJsonString =
-          await rootBundle.loadString(AppComponents.annualPredictionsData);
-      final List<dynamic> predictionsJson = json.decode(predictionsJsonString);
-
       setState(() {
         summaryData = AnnualSummaryModel.fromJson(summaryJson);
-        predictionsData = predictionsJson
-            .map<AnnualPredictionModel>(
-                (item) => AnnualPredictionModel.fromJson(item))
-            .toList();
         isLoading = false;
       });
     } catch (e) {
@@ -66,10 +56,10 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'ixj;air m,dm,',
+          'සංවත්සර පලාපල',
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),
@@ -89,13 +79,7 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
                       )
                     : SingleChildScrollView(
                         padding: const EdgeInsets.all(16),
-                        child: Column(
-                          children: [
-                            _buildSummarySection(),
-                            const SizedBox(height: 20),
-                            _buildPredictionsSection(),
-                          ],
-                        ),
+                        child: _buildSummarySection(),
                       ),
           ),
         ),
@@ -137,7 +121,7 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
               summaryData.title,
               style: const TextStyle(
                 fontSize: 22,
-                fontFamily: AppComponents.accentFont,
+                
                 fontWeight: FontWeight.w400,
                 color: Colors.white,
               ),
@@ -150,85 +134,13 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
                 Text(
                   summaryData.content,
                   style: const TextStyle(
-                    fontSize: 20,
-                    fontFamily: AppComponents.accentFont,
+                    fontSize: 19,
                     color: AppColor.btnSubTextColor,
-                    height: 1.5,
+                    height: 1.6,
                   ),
                   textAlign: TextAlign.justify,
                 ),
               ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildPredictionsSection() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 8,
-            offset: const Offset(0, 3),
-          ),
-        ],
-        border: Border.all(
-          color: AppColor.borderLightColor,
-          width: 2,
-        ),
-      ),
-      child: Column(
-        children: [
-          Container(
-            decoration: const BoxDecoration(
-              color: AppColor.btnTextColor,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(14),
-                topRight: Radius.circular(14),
-              ),
-            ),
-            height: 50,
-            width: double.infinity,
-            alignment: Alignment.center,
-            child: const Text(
-              'l%s-j-2025 ixj;air m,dm,',
-              style: TextStyle(
-                fontSize: 22,
-                fontFamily: AppComponents.accentFont,
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: List.generate(
-                predictionsData.length,
-                (index) => Column(
-                  children: [
-                    Text(
-                      predictionsData[index].content,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontFamily: AppComponents.accentFont,
-                        color: AppColor.btnSubTextColor,
-                        height: 1.5,
-                      ),
-                      textAlign: index == predictionsData.length - 1
-                          ? TextAlign.start
-                          : TextAlign.justify,
-                    ),
-                    if (index < predictionsData.length - 1)
-                      const SizedBox(height: 10),
-                  ],
-                ),
-              ),
             ),
           ),
         ],

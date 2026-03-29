@@ -4,7 +4,7 @@
       "year": 2026,
       "month": 1,
       "day": 15,
-      "name": "ff;fmdx.,a Èkh",
+      "name": "තෛපොංගල් දිනය",
       "description": "තෛපොංගල් දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -12,7 +12,7 @@
       "year": 2026,
       "month": 2,
       "day": 4,
-      "name": "ksoyia Èkh",
+      "name": "නිදහස් දිනය",
       "description": "නිදහස් සැමරුම් දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -20,7 +20,7 @@
       "year": 2026,
       "month": 2,
       "day": 15,
-      "name": "uyd Ysjrd;%S Èkh",
+      "name": "මහා ශිවරාත‍්‍රී දිනය",
       "description": "මහ සිවරාත්‍රී දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -28,7 +28,7 @@
       "year": 2026,
       "month": 3,
       "day": 21,
-      "name": "Bÿ,a *S;¾ - rduidka Èkh",
+      "name": "ඊදුල් ෆීතර් - රාමසාන් දිනය",
       "description": "ඊදුල් ෆීතර් (රාමසාන් දිනය) අදයි...",
       "isPublicHoliday": true
     },
@@ -36,7 +36,7 @@
       "year": 2026,
       "month": 4,
       "day": 3,
-      "name": "uy isl=rdod Èkh",
+      "name": "මහ සිකුරාදා දිනය",
       "description": "මහ සිකුරාදා දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -44,7 +44,7 @@
       "year": 2026,
       "month": 4,
       "day": 13,
-      "name": "isxy, yskaÿ w¨;a wjqreÿ Èkg fmr Èk",
+      "name": "සිංහල හින්දු අලූත් අවුරුදු දිනට පෙර දින",
       "description": "සිංහල හින්දු අලුත් අවුරුදු දිනට පෙර දින අදයි...",
       "isPublicHoliday": true
     },
@@ -52,7 +52,7 @@
       "year": 2026,
       "month": 4,
       "day": 14,
-      "name": "isxy, yskaÿ w¨;a wjqreÿ Èkh",
+      "name": "සිංහල හින්දු අලූත් අවුරුදු දිනය",
       "description": "සිංහල හින්දු අලුත් අවුරුදු දින අදයි...",
       "isPublicHoliday": true
     },
@@ -60,7 +60,7 @@
       "year": 2026,
       "month": 5,
       "day": 1,
-      "name": "f,dal lïlre Èkh",
+      "name": "ලෝක කම්කරු දිනය",
       "description": "ලෝක කම්කරු දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -68,7 +68,7 @@
       "year": 2026,
       "month": 5,
       "day": 2,
-      "name": "fjila fmdah Èkg miq Èkh",
+      "name": "වෙසක් පෝය දිනට පසු දිනය",
       "description": "වෙසක් පෝය දිනට පසු දින...",
       "isPublicHoliday": true
     },
@@ -76,7 +76,7 @@
       "year": 2026,
       "month": 5,
       "day": 28,
-      "name": "Bÿ,a w,ayd W;aij Èkh",
+      "name": "ඊදුල් අල්හා උත්සව දිනය",
       "description": "ඊදුල් අල්හා (හජ්ජි උත්සව දිනය) අදයි...",
       "isPublicHoliday": true
     },
@@ -84,7 +84,7 @@
       "year": 2026,
       "month": 8,
       "day": 26,
-      "name": "ñ,d ÿka kì - kì kdhl;=udf.a Wmka Èkh",
+      "name": "මිලා දුන් නබි - නබි නායකතුමාගේ උපන් දිනය",
       "description": "මිලා දුන් නබි (නබි නායක තුමාගේ උපන්දිනය) අදයි...",
       "isPublicHoliday": true
     },
@@ -92,7 +92,7 @@
       "year": 2026,
       "month": 11,
       "day": 8,
-      "name": "§mdj,S W;aij Èkh",
+      "name": "දීපාවලී උත්සව දිනය",
       "description": "දීපාවලී දිනය අදයි...",
       "isPublicHoliday": true
     },
@@ -100,7 +100,7 @@
       "year": 2026,
       "month": 12,
       "day": 25,
-      "name": "k;a;,a Èkh",
+      "name": "නත්තල් දිනය",
       "description": "නත්තල් දිනය අදයි...",
       "isPublicHoliday": true
     }
@@ -117,7 +117,7 @@
       "year": 2026,
       "month": 1,
       "day": 18,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -138,7 +138,7 @@
       "year": 2026,
       "month": 2,
       "day": 16,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -159,7 +159,7 @@
       "year": 2026,
       "month": 3,
       "day": 18,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -180,7 +180,7 @@
       "year": 2026,
       "month": 4,
       "day": 16,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -201,7 +201,7 @@
       "year": 2026,
       "month": 5,
       "day": 16,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -222,7 +222,7 @@
       "year": 2026,
       "month": 6,
       "day": 14,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -243,7 +243,7 @@
       "year": 2026,
       "month": 7,
       "day": 13,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -264,7 +264,7 @@
       "year": 2026,
       "month": 8,
       "day": 12,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -285,7 +285,7 @@
       "year": 2026,
       "month": 9,
       "day": 10,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -306,7 +306,7 @@
       "year": 2026,
       "month": 11,
       "day": 8,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -327,7 +327,7 @@
       "year": 2026,
       "month": 12,
       "day": 8,
-      "phase": "None",
+      "phase": "none",
       "name": "No Moon"
     },
     {
@@ -350,91 +350,91 @@
       "year": 2026,
       "month": 1,
       "day": 3,
-      "name": "ÿre;= mqr mif<diajl fmdfydh Èkh ",
+      "name": "දුරුතු පුර පසළොස්වක පොහොය දිනය ",
       "description": "දුරුතු පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 2,
       "day": 1,
-      "name": "kjï mqr mif<diajl fmdfydh Èkh ",
+      "name": "නවම් පුර පසළොස්වක පොහොය දිනය ",
       "description": "නවම් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 3,
       "day": 2,
-      "name": "ueÈka mqr mif<diajl fmdfydh Èkh ",
+      "name": "මැදින් පුර පසළොස්වක පොහොය දිනය ",
       "description": "මැදින් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 4,
       "day": 1,
-      "name": "nla mqr mif<diajl fmdfydh Èkh ",
+      "name": "බක් පුර පසළොස්වක පොහොය දිනය ",
       "description": "බක් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 5,
       "day": 1,
-      "name": "uehs mqr mif<diajl fmdfydh Èkh ",
+      "name": "මැයි පුර පසළොස්වක පොහොය දිනය ",
       "description": "වෙසක් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 5,
       "day": 30,
-      "name": "wê fmdfidka mqr mif<diajl fmdfydh Èkh",
+      "name": "අධි පොසොන් පුර පසළොස්වක පොහොය දිනය",
       "description": "අධි පොසොන් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 6,
       "day": 29,
-      "name": "fmdfidka mqr mif<diajl fmdfydh Èkh ",
+      "name": "පොසොන් පුර පසළොස්වක පොහොය දිනය ",
       "description": "පොසොන් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 7,
       "day": 29,
-      "name": "wei< mqr mif<diajl fmdfydh Èkh ",
+      "name": "ඇසළ පුර පසළොස්වක පොහොය දිනය ",
       "description": "ඇසළ පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 8,
       "day": 27,
-      "name": "kslsKs mqr mif<diajl fmdfydh Èkh ",
+      "name": "නිකිණි පුර පසළොස්වක පොහොය දිනය ",
       "description": "නිකිණි පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 9,
       "day": 26,
-      "name": "ìkr mqr mif<diajl fmdfydh Èkh ",
+      "name": "බිනර පුර පසළොස්වක පොහොය දිනය ",
       "description": "බිනර පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 10,
       "day": 25,
-      "name": "jma mqr mif<diajl fmdfydh Èkh ",
+      "name": "වප් පුර පසළොස්වක පොහොය දිනය ",
       "description": "වප් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 11,
       "day": 24,
-      "name": "b,a mqr mif<diajl fmdfydh Èkh ",
+      "name": "ඉල් පුර පසළොස්වක පොහොය දිනය ",
       "description": "ඉල් පුර පසළොස්වක පොහොය දිනය අදයි..."
     },
     {
       "year": 2026,
       "month": 12,
       "day": 23,
-      "name": "W÷jma mqr mif<diajl fmdfydh Èkh ",
+      "name": "උඳුවප් පුර පසළොස්වක පොහොය දිනය ",
       "description": "උඳුවප් පුර පසළොස්වක පොහොය දිනය අදයි..."
     }
   ]

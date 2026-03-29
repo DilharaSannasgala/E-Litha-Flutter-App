@@ -2,18 +2,18 @@ class CustomDateTime {
   // Function to convert month to custom values
   String getCustomMonth(int month) {
     Map<int, String> monthMap = {
-      1: 'ckjdß', // January
-      2: 'fmnrjdß', // February
-      3: 'ud¾;=', // March
-      4: 'wfma%,a', // April
-      5: 'uehs', // May
-      6: 'cqks', // June
-      7: 'cQ,s', // July
-      8: 'wf.daia;=', // August
-      9: 'iema;eïn¾', // September
-      10: 'Tlaf;daïn¾', // October
-      11: 'fkdjeïn¾', // November
-      12: 'foieïn¾' // December
+      1: 'ජනවාරි', // January
+      2: 'පෙබරවාරි', // February
+      3: 'මාර්තු', // March
+      4: 'අප්‍රේල්', // April
+      5: 'මැයි', // May
+      6: 'ජූනි', // June
+      7: 'ජූලි', // July
+      8: 'අගෝස්තු', // August
+      9: 'සැප්තැම්බර්', // September
+      10: 'ඔක්තෝබර්', // October
+      11: 'නොවැම්බර්', // November
+      12: 'දෙසැම්බර්' // December
     };
 
     // Make sure to handle invalid month numbers
@@ -26,18 +26,18 @@ class CustomDateTime {
 
   String getCustomMonthShort(int month) {
     Map<int, String> monthMap = {
-      1: 'ck', // January
-      2: 'fmn', // February
-      3: 'ud¾;=', // March
-      4: 'wfma%,a', // April
-      5: 'uehs', // May
-      6: 'cqks', // June
-      7: 'cQ,s', // July
-      8: 'wf.da', // August
-      9: 'iema', // September
-      10: 'Tlaf;da', // October
-      11: 'fkdje', // November
-      12: 'foie' // December
+      1: 'ජන', // January
+      2: 'පෙබ', // February
+      3: 'මාර්තු', // March
+      4: 'අප්‍රේල්', // April
+      5: 'මැයි', // May
+      6: 'ජූනි', // June
+      7: 'ජූලි', // July
+      8: 'අගෝ', // August
+      9: 'සැප්', // September
+      10: 'ඔක්', // October
+      11: 'නොවැ', // November
+      12: 'දෙසැ' // December
     };
 
     // Make sure to handle invalid month numbers
@@ -51,13 +51,13 @@ class CustomDateTime {
   // Function to convert day of the week to custom values
   String getCustomDay(int weekday) {
     Map<int, String> dayMap = {
-      1: 'iÿod', // Monday
-      2: 'wÕyrejdod', // Tuesday
-      3: 'nodod', // Wednesday
-      4: 'n%yiam;skaod', // Thursday
-      5: 'isl=rdod', // Friday
-      6: 'fikiqrdod', // Saturday
-      7: 'bßod' // Sunday
+      1: 'සඳුදා', // Monday
+      2: 'අඟහරුවාදා', // Tuesday
+      3: 'බදාදා', // Wednesday
+      4: 'බ්‍රහස්පතින්දා', // Thursday
+      5: 'සිකුරාදා', // Friday
+      6: 'සෙනසුරාදා', // Saturday
+      7: 'ඉරිදා' // Sunday
     };
 
     return dayMap[weekday] ?? 'Unknown Day';

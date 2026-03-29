@@ -31,7 +31,7 @@ class DateContainer extends StatelessWidget {
               month,
               style: const TextStyle(
                 fontSize: 16,
-                fontFamily: AppComponents.accentFont,
+                
                 color: AppColor.btnTextColor,
                 height: 1.2,
               ),
@@ -40,7 +40,7 @@ class DateContainer extends StatelessWidget {
               day,
               style: const TextStyle(
                 fontSize: 24,
-                fontFamily: AppComponents.accentFont,
+                
                 fontWeight: FontWeight.bold,
                 color: AppColor.btnTextColor,
                 height: 1.3,

@@ -16,9 +16,7 @@ class AppComponents {
   static const String noMoon = '${iconPath}no-moon.svg';
 
   //_______fonts
-  static const String accentFont = 'AccentFont';
-  static const String titleFont = 'TitleFont';
-  static const String subTextFont = 'SubTextFont';
+  // Removed legacy fonts and transitioned to Google Fonts
 
   //_______data
   static const String calendarData = "assets/data/calendar_data.json";

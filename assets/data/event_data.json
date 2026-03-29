@@ -1,385 +1,384 @@
 {
-    "eventTimes": [
-      {
-        "title": "lka ú§u",
-        "icon": "assets/icons/ear-pierce.svg",
-        "dates": [
-          {
-            "day": 9,
-            "month": 1,
-            "description": "ckjdß 09 n%yiam;skaod Wfoa 09-28g kefÕkysr n,d"
-          },
-          {
-            "day": 19,
-            "month": 3,
-            "description": "ud¾;= 19 nodod Wfoa 10-01 g kef.kysr n,d"
-          },
-          {
-            "day": 2,
-            "month": 5,
-            "description": "uehs 02 isl=rdod Wfoa 10-09g W;=r n,d"
-          },
-          {
-            "day": 4,
-            "month": 8,
-            "description": "wf.daia;= 04 i÷od Wfoa 11-08g ol=K n,d"
-          },
-          {
-            "day": 4,
-            "month": 9,
-            "description": "iema;eïn¾ 04 n%yiam;skaod Wfoa 09-06g W;=r n,d"
-          },
-          {
-            "day": 3,
-            "month": 11,
-            "description": "fkdjeïn¾ 03 i÷od Wfoa 11-38g W;=r n,d"
-          },
-          {
-            "day": 11,
-            "month": 12,
-            "description": "foieïn¾ 11 n%yiam;skaod Wfoa 11-43g kef.kysr n,d"
-          }
-        ]
-      },
-      {
-        "title": "ysifla lemSu",
-        "icon": "assets/icons/hair-cut.svg",
-        "dates": [
-          {
-            "day": 30,
-            "month": 1,
-            "description": "ckjdß 30 n%yiam;skaod Wfoa 9-32 g W;=r n,d"
-          },
-          {
-            "day": 19,
-            "month": 3,
-            "description": "ud¾;= 19 nodod Wfoa 10-01 g kef.kysr n,d"
-          },
-          {
-            "day": 16,
-            "month": 6,
-            "description": "cqks 16 i÷od Wfoa 10-58g W;=r n,d"
-          },
-          {
-            "day": 17,
-            "month": 7,
-            "description": "cQ,s 17 n%yiam;skaod Wfoa 10-25g kef.kysr n,d"
-          },
-          {
-            "day": 17,
-            "month": 9,
-            "description": "iema;eïn¾ 17 nodod Wfoa 07-38g ol=K n,d"
-          },
-          {
-            "day": 2,
-            "month": 10,
-            "description": "Tlaf;daïn¾ 02 n%yiam;skaod Wfoa 11-28g W;=r n,d"
-          },
-          {
-            "day": 31,
-            "month": 12,
-            "description": "foieïn¾ 31 nodod Wfoa 09-38g ol=K n,d"
-          }
-        ]
-      },
-      {
-        "title": "n;a leùu",
-        "icon": "assets/icons/feed-rice.svg",
-        "dates": [
-          {
-            "day": 15,
-            "month": 1,
-            "description": "ckjdß 15 nodod Wfoa 08-06g kef.kysr n,d"
-          },
-          {
-            "day": 26,
-            "month": 3,
-            "description": "ud¾;= 26 nodod Wfoa 09-30g kef.kysr n,d"
-          },
-          {
-            "day": 18,
-            "month": 4,
-            "description": "wfma%,a 18 isl=rdod Wfoa 10-05g W;=r n,d"
-          },
-          {
-            "day": 6,
-            "month": 8,
-            "description": "wf.daia;= 06 nodod Wfoa 09-08g ol=K n,d"
-          },
-          {
-            "day": 3,
-            "month": 9,
-            "description": "iema;eïn¾ 03 nodod Wfoa 09-06g ol=K n,d"
-          },
-          {
-            "day": 2,
-            "month": 10,
-            "description": "Tlaf;daïn¾ 02 n%yiam;skaod Wfoa 11-28g W;=r n,d"
-          },
-          {
-            "day": 3,
-            "month": 11,
-            "description": "fkdjeïn¾ 03 i÷od Wfoa 11-38g W;=r n,d"
-          }
-        ]
-      },
-      {
-        "title": "wl=re lshùu",
-        "icon": "assets/icons/read.svg",
-        "dates": [
-          {
-            "day": 28,
-            "month": 2,
-            "description": "fmnrjdß 28 isl=rdod Wfoa 06-34g W;=r n,d"
-          },
-          {
-            "day": 5,
-            "month": 3,
-            "description": "ud¾;= 05 nodod Wfoa 06-36g kef.kysr n,d"
-          },
-          {
-            "day": 26,
-            "month": 3,
-            "description": "ud¾;= 26 nodod Wfoa 09-30g kef.kysr n,d"
-          },
-          {
-            "day": 2,
-            "month": 4,
-            "description": "wfma%,a 02 nodod Wfoa 09-12g kefykysr n,d"
-          },
-          {
-            "day": 7,
-            "month": 5,
-            "description": "uehs 07 nodod Wfoa 08-58g kef.kysr n,d"
-          },
-          {
-            "day": 3,
-            "month": 9,
-            "description": "iema;eïn¾ 03 nodod Wfoa 09-06g ol=K n,d"
-          },
-          {
-            "day": 5,
-            "month": 12,
-            "description": "foieïn¾ 05 isl=rdod Wfoa 10-12g ol=K n,d"
-          }
-        ]
-      },
-      {
-        "title": "újy lghq;=",
-        "icon": "assets/icons/wedding.svg",
-        "dates": [
-          {
-            "day": 26,
-            "month": 3,
-            "description": "ud¾;= 26 nodod Wfoa 09-30g kef.kysr n,d"
-          },
-          {
-            "day": 23,
-            "month": 5,
-            "description": "uehs 23 isl=rdod Wfoa 09-55g W;=r n,d"
-          },
-          {
-            "day": 16,
-            "month": 6,
-            "description": "cqks 16 i÷od Wfoa 10-58g W;=r n,d"
-          },
-          {
-            "day": 3,
-            "month": 9,
-            "description": "iema;eïn¾ 03 nodod Wfoa 09-06g ol=K n,d"
-          },
-          {
-            "day": 27,
-            "month": 10,
-            "description": "fkdjeïn¾ 27 n%yiam;skaod Wfoa 10-08g kef.kysr n,d"
-          },
-          {
-            "day": 5,
-            "month": 12,
-            "description": "foieïn¾ 05 isl=rdod Wfoa 10-12g ol=K n,d"
-          }
-        ]
-      },
-      {
-        "title": "fj<|dï lghq;=",
-        "icon": "assets/icons/business.svg",
-        "dates": [
-          {
-            "day": 9,
-            "month": 1,
-            "description": "ckjdß 09 n%yiam;skaod Wfoa 09-28g kef.kysr n,d"
-          },
-          {
-            "day": 28,
-            "month": 2,
-            "description": "fmnrjdß 28 isl=rdod Wfoa 06-34g W;=r n,d"
-          },
-          {
-            "day": 28,
-            "month": 4,
-            "description": "wfma%,a 28 i÷od Wfoa 11-00g W;=r n,d"
-          },
-          {
-            "day": 7,
-            "month": 5,
-            "description": "uehs 07 nodod Wfoa 08-58g kef.kysr n,d"
-          },
-          {
-            "day": 4,
-            "month": 8,
-            "description": "w.+ia;= 04 i÷od Wfoa 11-08g ol=K n,d"
-          },
-          {
-            "day": 26,
-            "month": 12,
-            "description": "foieïn¾ 26 isl=rdod Wfoa 07-21g W;=r n,d"
-          }
-        ]
-      },
-      {
-        "title": "f.j,a iE§ug",
-        "icon": "assets/icons/construct.svg",
-        "dates": [
-          {
-            "day": 15,
-            "month": 1,
-            "description": "ckjdß 15 nodod Wfoa 08-06g kef.kysr n,d"
-          },
-          {
-            "day": 19,
-            "month": 3,
-            "description": "ud¾;= 19 nodod Wfoa 10-01g kef.kysr n,d"
-          },
-          {
-            "day": 2,
-            "month": 4,
-            "description": "wfma%,a 02 nodod Wfoa 09-12g kef.kysr n,d"
-          },
-          {
-            "day": 6,
-            "month": 6,
-            "description": "cqks 06 isl=rdod Wfoa 06-01g ol=K n,d"
-          },
-          {
-            "day": 6,
-            "month": 11,
-            "description": "fkdjeïn¾ 06 n%yiam;skaod Wfoa 06-01g W;=r n,d"
-          },
-          {
-            "day": 25,
-            "month": 12,
-            "description": "foieïn¾ 25 n%yiam;skaod Wfoa 06-21g kef.kysr n,d"
-          }
-        ]
-      },
-      {
-        "title": "f.g f.j§u",
-        "icon": "assets/icons/home.svg",
-        "dates": [
-          {
-            "day": 20,
-            "month": 2,
-            "description": "fmnrjdß 20 n%yiam;skaod Wfoa 06-30g kef.kysr n,d"
-          },
-          {
-            "day": 5,
-            "month": 3,
-            "description": "ud¾;= 05 nodod Wfoa 06-36g kef.kysr n,d"
-          },
-          {
-            "day": 23,
-            "month": 5,
-            "description": "uehs 23 isl=rdod Wfoa 09-55g W;=r n,d"
-          },
-          {
-            "day": 4,
-            "month": 8,
-            "description": "wf.daia;= 04 i÷od Wfoa 11-08g ol=K n,d"
-          },
-          {
-            "day": 2,
-            "month": 10,
-            "description": "Tlaf;daïn¾ 02 n%yiam;skaod Wfoa 11-28g W;=r n,d"
-          },
-          {
-            "day": 2,
-            "month": 10,
-            "description": "Tlaf;daïn¾ 02 n%yiam;skaod Wfoa 11-28g W;=r n,d"
-          },
-          {
-            "day": 11,
-            "month": 12,
-            "description": "foieïn¾ 11 n%yiam;skaod Wfoa 11-43g kef.kysr n,d"
-          }
-        ]
-      },
-      {
-        "title": "ish¨ f.dú;eka jev",
-        "icon": "assets/icons/farm.svg",
-        "dates": [
-          {
-            "day": 15,
-            "month": 1,
-            "description": "ckjdß 15 nodod Wfoa 08-06g kef.kysr n,d"
-          },
-          {
-            "day": 5,
-            "month": 5,
-            "description": "uehs 05 i÷od Wfoa 06-55g W;=r n,d"
-          },
-          {
-            "day": 9,
-            "month": 6,
-            "description": "cqks 09 i÷od Wfoa 06-25g kef.kysr n,d"
-          },
-          {
-            "day": 2,
-            "month": 7,
-            "description": "cQ,s 02 nodod Wfoa 06-15g ol=K n,d"
-          },
-          {
-            "day": 22,
-            "month": 9,
-            "description": "iema;eïn¾ 22 i÷od Wfoa 06-27g ol=K n,d"
-          },          
-          {
-            "day": 26,
-            "month": 12,
-            "description": "foieïn¾ 26 isl=rdod Wfoa 07-21g W;=r n,d"
-          }
-        ]
-      },
-      {
-        "title": "uyK lsÍu",
-        "icon": "assets/icons/monk.svg",
-        "dates": [
-          {
-            "day": 28,
-            "month": 2,
-            "description": "fmnrjdß 28 isl=rdod Wfoa 06-34g W;=r n,d"
-          },
-          {
-            "day": 28,
-            "month": 5,
-            "description": "uehs 28 nodod Wfoa 09-32g ol=K n,d"
-          },
-          {
-            "day": 20,
-            "month": 8,
-            "description": "wf.daia;= 20 nodod Wfoa 09-08g ol=K n,d"
-          },
-          {
-            "day": 6,
-            "month": 11,
-            "description": "fkdjeïn¾ 06 n%yiam;skaod Wfoa 06-01g W;=r n,d"
-          },
-          {
-            "day": 25,
-            "month": 12,
-            "description": "foieïn¾ 25 n%yiam;skaod Wfoa 06-21g kef.kysr n,d"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "eventTimes": [
+    {
+      "title": "කන් විදීම",
+      "icon": "assets/icons/ear-pierce.svg",
+      "dates": [
+        {
+          "day": 9,
+          "month": 1,
+          "description": "ජනවාරි 09 බ‍්‍රහස්පතින්දා උදේ 09-28ට නැෙඟනහිර බලා"
+        },
+        {
+          "day": 19,
+          "month": 3,
+          "description": "මාර්තු 19 බදාදා උදේ 10-01 ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 2,
+          "month": 5,
+          "description": "මැයි 02 සිකුරාදා උදේ 10-09ට උතුර බලා"
+        },
+        {
+          "day": 4,
+          "month": 8,
+          "description": "අගෝස්තු 04 සඳුදා උදේ 11-08ට දකුණ බලා"
+        },
+        {
+          "day": 4,
+          "month": 9,
+          "description": "සැප්තැම්බර් 04 බ‍්‍රහස්පතින්දා උදේ 09-06ට උතුර බලා"
+        },
+        {
+          "day": 3,
+          "month": 11,
+          "description": "නොවැම්බර් 03 සඳුදා උදේ 11-38ට උතුර බලා"
+        },
+        {
+          "day": 11,
+          "month": 12,
+          "description": "දෙසැම්බර් 11 බ‍්‍රහස්පතින්දා උදේ 11-43ට නැගෙනහිර බලා"
+        }
+      ]
+    },
+    {
+      "title": "හිසකේ කැපීම",
+      "icon": "assets/icons/hair-cut.svg",
+      "dates": [
+        {
+          "day": 30,
+          "month": 1,
+          "description": "ජනවාරි 30 බ‍්‍රහස්පතින්දා උදේ 9-32 ට උතුර බලා"
+        },
+        {
+          "day": 19,
+          "month": 3,
+          "description": "මාර්තු 19 බදාදා උදේ 10-01 ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 16,
+          "month": 6,
+          "description": "ජුනි 16 සඳුදා උදේ 10-58ට උතුර බලා"
+        },
+        {
+          "day": 17,
+          "month": 7,
+          "description": "ජූලි 17 බ‍්‍රහස්පතින්දා උදේ 10-25ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 17,
+          "month": 9,
+          "description": "සැප්තැම්බර් 17 බදාදා උදේ 07-38ට දකුණ බලා"
+        },
+        {
+          "day": 2,
+          "month": 10,
+          "description": "ඔක්තෝම්බර් 02 බ‍්‍රහස්පතින්දා උදේ 11-28ට උතුර බලා"
+        },
+        {
+          "day": 31,
+          "month": 12,
+          "description": "දෙසැම්බර් 31 බදාදා උදේ 09-38ට දකුණ බලා"
+        }
+      ]
+    },
+    {
+      "title": "බත් කැවීම",
+      "icon": "assets/icons/feed-rice.svg",
+      "dates": [
+        {
+          "day": 15,
+          "month": 1,
+          "description": "ජනවාරි 15 බදාදා උදේ 08-06ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 26,
+          "month": 3,
+          "description": "මාර්තු 26 බදාදා උදේ 09-30ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 18,
+          "month": 4,
+          "description": "අපේ‍්‍රල් 18 සිකුරාදා උදේ 10-05ට උතුර බලා"
+        },
+        {
+          "day": 6,
+          "month": 8,
+          "description": "අගෝස්තු 06 බදාදා උදේ 09-08ට දකුණ බලා"
+        },
+        {
+          "day": 3,
+          "month": 9,
+          "description": "සැප්තැම්බර් 03 බදාදා උදේ 09-06ට දකුණ බලා"
+        },
+        {
+          "day": 2,
+          "month": 10,
+          "description": "ඔක්තෝම්බර් 02 බ‍්‍රහස්පතින්දා උදේ 11-28ට උතුර බලා"
+        },
+        {
+          "day": 3,
+          "month": 11,
+          "description": "නොවැම්බර් 03 සඳුදා උදේ 11-38ට උතුර බලා"
+        }
+      ]
+    },
+    {
+      "title": "අකුරු කියවීම",
+      "icon": "assets/icons/read.svg",
+      "dates": [
+        {
+          "day": 28,
+          "month": 2,
+          "description": "පෙබරවාරි 28 සිකුරාදා උදේ 06-34ට උතුර බලා"
+        },
+        {
+          "day": 5,
+          "month": 3,
+          "description": "මාර්තු 05 බදාදා උදේ 06-36ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 26,
+          "month": 3,
+          "description": "මාර්තු 26 බදාදා උදේ 09-30ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 2,
+          "month": 4,
+          "description": "අපේ‍්‍රල් 02 බදාදා උදේ 09-12ට නැහෙනහිර බලා"
+        },
+        {
+          "day": 7,
+          "month": 5,
+          "description": "මැයි 07 බදාදා උදේ 08-58ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 3,
+          "month": 9,
+          "description": "සැප්තැම්බර් 03 බදාදා උදේ 09-06ට දකුණ බලා"
+        },
+        {
+          "day": 5,
+          "month": 12,
+          "description": "දෙසැම්බර් 05 සිකුරාදා උදේ 10-12ට දකුණ බලා"
+        }
+      ]
+    },
+    {
+      "title": "විවහ කටයුතු",
+      "icon": "assets/icons/wedding.svg",
+      "dates": [
+        {
+          "day": 26,
+          "month": 3,
+          "description": "මාර්තු 26 බදාදා උදේ 09-30ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 23,
+          "month": 5,
+          "description": "මැයි 23 සිකුරාදා උදේ 09-55ට උතුර බලා"
+        },
+        {
+          "day": 16,
+          "month": 6,
+          "description": "ජුනි 16 සඳුදා උදේ 10-58ට උතුර බලා"
+        },
+        {
+          "day": 3,
+          "month": 9,
+          "description": "සැප්තැම්බර් 03 බදාදා උදේ 09-06ට දකුණ බලා"
+        },
+        {
+          "day": 27,
+          "month": 10,
+          "description": "නොවැම්බර් 27 බ‍්‍රහස්පතින්දා උදේ 10-08ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 5,
+          "month": 12,
+          "description": "දෙසැම්බර් 05 සිකුරාදා උදේ 10-12ට දකුණ බලා"
+        }
+      ]
+    },
+    {
+      "title": "වෙළඳාම් කටයුතු",
+      "icon": "assets/icons/business.svg",
+      "dates": [
+        {
+          "day": 9,
+          "month": 1,
+          "description": "ජනවාරි 09 බ‍්‍රහස්පතින්දා උදේ 09-28ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 28,
+          "month": 2,
+          "description": "පෙබරවාරි 28 සිකුරාදා උදේ 06-34ට උතුර බලා"
+        },
+        {
+          "day": 28,
+          "month": 4,
+          "description": "අපේ‍්‍රල් 28 සඳුදා උදේ 11-00ට උතුර බලා"
+        },
+        {
+          "day": 7,
+          "month": 5,
+          "description": "මැයි 07 බදාදා උදේ 08-58ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 4,
+          "month": 8,
+          "description": "අගූස්තු 04 සඳුදා උදේ 11-08ට දකුණ බලා"
+        },
+        {
+          "day": 26,
+          "month": 12,
+          "description": "දෙසැම්බර් 26 සිකුරාදා උදේ 07-21ට උතුර බලා"
+        }
+      ]
+    },
+    {
+      "title": "ගෙවල් සෑදීමට",
+      "icon": "assets/icons/construct.svg",
+      "dates": [
+        {
+          "day": 15,
+          "month": 1,
+          "description": "ජනවාරි 15 බදාදා උදේ 08-06ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 19,
+          "month": 3,
+          "description": "මාර්තු 19 බදාදා උදේ 10-01ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 2,
+          "month": 4,
+          "description": "අපේ‍්‍රල් 02 බදාදා උදේ 09-12ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 6,
+          "month": 6,
+          "description": "ජුනි 06 සිකුරාදා උදේ 06-01ට දකුණ බලා"
+        },
+        {
+          "day": 6,
+          "month": 11,
+          "description": "නොවැම්බර් 06 බ‍්‍රහස්පතින්දා උදේ 06-01ට උතුර බලා"
+        },
+        {
+          "day": 25,
+          "month": 12,
+          "description": "දෙසැම්බර් 25 බ‍්‍රහස්පතින්දා උදේ 06-21ට නැගෙනහිර බලා"
+        }
+      ]
+    },
+    {
+      "title": "ගෙට ගෙවදීම",
+      "icon": "assets/icons/home.svg",
+      "dates": [
+        {
+          "day": 20,
+          "month": 2,
+          "description": "පෙබරවාරි 20 බ‍්‍රහස්පතින්දා උදේ 06-30ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 5,
+          "month": 3,
+          "description": "මාර්තු 05 බදාදා උදේ 06-36ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 23,
+          "month": 5,
+          "description": "මැයි 23 සිකුරාදා උදේ 09-55ට උතුර බලා"
+        },
+        {
+          "day": 4,
+          "month": 8,
+          "description": "අගෝස්තු 04 සඳුදා උදේ 11-08ට දකුණ බලා"
+        },
+        {
+          "day": 2,
+          "month": 10,
+          "description": "ඔක්තෝම්බර් 02 බ‍්‍රහස්පතින්දා උදේ 11-28ට උතුර බලා"
+        },
+        {
+          "day": 2,
+          "month": 10,
+          "description": "ඔක්තෝම්බර් 02 බ‍්‍රහස්පතින්දා උදේ 11-28ට උතුර බලා"
+        },
+        {
+          "day": 11,
+          "month": 12,
+          "description": "දෙසැම්බර් 11 බ‍්‍රහස්පතින්දා උදේ 11-43ට නැගෙනහිර බලා"
+        }
+      ]
+    },
+    {
+      "title": "සියලූ ගොවිතැන් වැඩ",
+      "icon": "assets/icons/farm.svg",
+      "dates": [
+        {
+          "day": 15,
+          "month": 1,
+          "description": "ජනවාරි 15 බදාදා උදේ 08-06ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 5,
+          "month": 5,
+          "description": "මැයි 05 සඳුදා උදේ 06-55ට උතුර බලා"
+        },
+        {
+          "day": 9,
+          "month": 6,
+          "description": "ජුනි 09 සඳුදා උදේ 06-25ට නැගෙනහිර බලා"
+        },
+        {
+          "day": 2,
+          "month": 7,
+          "description": "ජූලි 02 බදාදා උදේ 06-15ට දකුණ බලා"
+        },
+        {
+          "day": 22,
+          "month": 9,
+          "description": "සැප්තැම්බර් 22 සඳුදා උදේ 06-27ට දකුණ බලා"
+        },
+        {
+          "day": 26,
+          "month": 12,
+          "description": "දෙසැම්බර් 26 සිකුරාදා උදේ 07-21ට උතුර බලා"
+        }
+      ]
+    },
+    {
+      "title": "මහණ කිරීම",
+      "icon": "assets/icons/monk.svg",
+      "dates": [
+        {
+          "day": 28,
+          "month": 2,
+          "description": "පෙබරවාරි 28 සිකුරාදා උදේ 06-34ට උතුර බලා"
+        },
+        {
+          "day": 28,
+          "month": 5,
+          "description": "මැයි 28 බදාදා උදේ 09-32ට දකුණ බලා"
+        },
+        {
+          "day": 20,
+          "month": 8,
+          "description": "අගෝස්තු 20 බදාදා උදේ 09-08ට දකුණ බලා"
+        },
+        {
+          "day": 6,
+          "month": 11,
+          "description": "නොවැම්බර් 06 බ‍්‍රහස්පතින්දා උදේ 06-01ට උතුර බලා"
+        },
+        {
+          "day": 25,
+          "month": 12,
+          "description": "දෙසැම්බර් 25 බ‍්‍රහස්පතින්දා උදේ 06-21ට නැගෙනහිර බලා"
+        }
+      ]
+    }
+  ]
+}

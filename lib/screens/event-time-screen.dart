@@ -65,10 +65,10 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
-          'iqN uqyq¾; - 2025',
+          'සුභ මුහුර්ත - 2025',
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),

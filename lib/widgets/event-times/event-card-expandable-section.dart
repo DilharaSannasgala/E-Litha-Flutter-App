@@ -38,7 +38,7 @@ class EventDateRow extends StatelessWidget {
                   CustomDateTime().getCustomMonthShort(date.month),
                   style: const TextStyle(
                     fontSize: 16,
-                    fontFamily: AppComponents.accentFont,
+                    
                     color: AppColor.btnTextColor,
                     height: 1.0,
                   ),
@@ -47,7 +47,7 @@ class EventDateRow extends StatelessWidget {
                   date.day.toString(),
                   style: const TextStyle(
                     fontSize: 24,
-                    fontFamily: AppComponents.accentFont,
+                    
                     fontWeight: FontWeight.bold,
                     color: AppColor.btnTextColor,
                     height: 1.0,
@@ -67,7 +67,7 @@ class EventDateRow extends StatelessWidget {
                 date.description,
                 style: const TextStyle(
                   fontSize: 18,
-                  fontFamily: AppComponents.accentFont,
+                  
                   color: AppColor.btnSubTextColor,
                 ),
               ),

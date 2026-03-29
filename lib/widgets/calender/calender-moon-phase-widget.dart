@@ -65,7 +65,7 @@ class MoonPhaseItem extends StatelessWidget {
                 month,
                 style: TextStyle(
                   fontSize: 16,
-                  fontFamily: AppComponents.accentFont,
+                  
                   color: AppColor.btnTextColor,
                   height: 1.0,
                 ),
@@ -75,7 +75,7 @@ class MoonPhaseItem extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  fontFamily: AppComponents.accentFont,
+                  
                   color: AppColor.btnTextColor,
                   height: 1.0,
                 ),

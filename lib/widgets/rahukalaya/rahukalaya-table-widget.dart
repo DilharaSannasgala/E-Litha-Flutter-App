@@ -53,7 +53,7 @@ class RahuKalayaTableWidget extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          fontFamily: AppComponents.accentFont,
+          
           fontSize: isDay ? 16 : 15,
           color: AppColor.btnTextColor,
           fontWeight: isDay ? FontWeight.bold : FontWeight.normal,

@@ -44,7 +44,7 @@ Widget buildSunButton(
                   Text(
                     firstLine,
                     style: TextStyle(
-                      fontFamily: AppComponents.accentFont,
+                      
                       color: AppColor.btnTextColor,
                       fontSize: 22,
                       height: 1.2,
@@ -53,7 +53,7 @@ Widget buildSunButton(
                   Text(
                     secondLine,
                     style: TextStyle(
-                      fontFamily: AppComponents.accentFont,
+                      
                       color: AppColor.btnTextColor,
                       fontSize: 30,
                       height: 1.0,

@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                         SizedBox(height: 20),
                         calenderButton(
                           context,
-                          textTitle: 'Èk o¾Ykh',
+                          textTitle: 'දින දර්ශනය',
                           textYear: "2026",
                           onPressed: () {
                             Navigator.pushNamed(context, '/calendar');
@@ -55,8 +55,8 @@ class HomePage extends StatelessWidget {
                         SizedBox(height: 20),
                         nakathButton(
                           context,
-                          textTitle: 'w¨;a wjqreÿ',
-                          textYear: 'kele;a iSÜgqj',
+                          textTitle: 'අලුත් අවුරුදු',
+                          textYear: 'නැකැත් සීට්ටුව',
                           onPressed: () {
                             Navigator.pushNamed(context, '/nakath');
                           },
@@ -76,23 +76,23 @@ class HomePage extends StatelessWidget {
                             itemBuilder: (context, index) {
                               List<Map<String, dynamic>> buttonData = [
                                 {
-                                  "first": "ixj;air",
-                                  "second": "m,dm,",
+                                  "first": "සංවත්සර",
+                                  "second": "පලාපල",
                                   "route": "/summary"
                                 },
                                 {
-                                  "first": "iqN",
-                                  "second": "ojia",
+                                  "first": "සුභ",
+                                  "second": "දවස්",
                                   "route": "/subhaDawasa"
                                 },
                                 {
-                                  "first": "rdyq",
-                                  "second": "ld,h",
+                                  "first": "රාහු",
+                                  "second": "කාලය",
                                   "route": "/rahukalaya"
                                 },
                                 {
-                                  "first": "rdYs",
-                                  "second": "wh jeh",
+                                  "first": "රාශි",
+                                  "second": "අය වැය",
                                   "route": "/rashiIncomeExpense"
                                 },
                               ];
@@ -125,18 +125,18 @@ class HomePage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'wdhqfndajka',
+          'ආයුබෝවන්',
           style: TextStyle(
-              fontFamily: AppComponents.titleFont,
+              
               fontSize: 50,
               color: AppColor.titleTextColor,
               fontWeight: FontWeight.w600,
               letterSpacing: 1),
         ),
         Text(
-          '${now.day} ${customDay} ${customMonth} ${now.year} \$ Y%S nqoaO j¾Y ${customYear}',
+          '${now.day} ${customDay} ${customMonth} ${now.year} ~ ශ්‍රී බුද්ධ වර්ෂ ${customYear}',
           style: TextStyle(
-            fontFamily: AppComponents.subTextFont,
+            
             fontSize: 20,
             color: AppColor.titleTextColor,
           ),
@@ -149,10 +149,10 @@ class HomePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 18.0, bottom: 10.0, top: 15.0),
       child: Text(
-        'm,dm, ,s;',
+        'පලාපල ලිත',
         style: TextStyle(
           fontSize: 28,
-          fontFamily: AppComponents.accentFont,
+          
           color: AppColor.subTextColor,
         ),
       ),

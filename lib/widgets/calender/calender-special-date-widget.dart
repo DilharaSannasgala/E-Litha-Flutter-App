@@ -93,7 +93,6 @@ class SpecialDateCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Get screen size to handle text overflow
-    final screenWidth = MediaQuery.of(context).size.width;
     final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
     
     return Container(
@@ -135,7 +134,7 @@ class SpecialDateCard extends StatelessWidget {
                       CustomDateTime().getCustomMonthShort(month),
                       style: TextStyle(
                         fontSize: 14,
-                        fontFamily: AppComponents.accentFont,
+                        
                         color: AppColor.btnTextColor,
                         height: 1.0,
                       ),
@@ -145,7 +144,7 @@ class SpecialDateCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        fontFamily: AppComponents.accentFont,
+                        
                         color: AppColor.btnTextColor,
                         height: 1.0,
                       ),
@@ -163,7 +162,7 @@ class SpecialDateCard extends StatelessWidget {
                     description,
                     style: TextStyle(
                       fontSize: isLandscape ? 24 : 20,
-                      fontFamily: AppComponents.accentFont,
+                      
                       color: AppColor.btnTextColor,
                     ),
                     overflow: TextOverflow.ellipsis,

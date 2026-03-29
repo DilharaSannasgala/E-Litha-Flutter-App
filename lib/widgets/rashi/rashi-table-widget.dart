@@ -46,7 +46,7 @@ class RashiTableWidget extends StatelessWidget {
                 child: Text(
                   tableData[rowIndex][colIndex],
                   style: TextStyle(
-                    fontFamily: AppComponents.accentFont,
+                    
                     fontSize: isHeader ? 18 : 16,
                     color: isHeader ? Colors.white : AppColor.btnTextColor,
                     fontWeight: isHeader || colIndex == 0 || colIndex == 3
@@ -86,7 +86,7 @@ class TableCellWidget extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          fontFamily: AppComponents.accentFont,
+          
           fontSize: isHeader ? 20 : 16,
           color: isHeader ? Colors.white : AppColor.btnTextColor,
           fontWeight:

@@ -58,7 +58,7 @@ Widget nakathButton(
                         textTitle,
                         style: TextStyle(
                           color: AppColor.btnTextColor,
-                          fontFamily: AppComponents.accentFont,
+                          
                           fontSize: 20,
                           height: 1.0,
                         ),
@@ -68,7 +68,7 @@ Widget nakathButton(
                         textYear,
                         style: TextStyle(
                           color: AppColor.btnTextColor,
-                          fontFamily: AppComponents.accentFont,
+                          
                           fontSize: 32,
                           height: 1.0,
                         ),

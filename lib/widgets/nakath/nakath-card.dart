@@ -114,7 +114,7 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
                                 widget.specialDate.name,
                                 style: const TextStyle(
                                     fontSize: 24,
-                                    fontFamily: AppComponents.accentFont,
+                                    
                                     fontWeight: FontWeight.w400,
                                     color: AppColor.btnTextColor,
                                     height: 1.2),
@@ -161,7 +161,7 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
                     child: Text(
                       widget.specialDate.description,
                       style: TextStyle(
-                        fontFamily: AppComponents.accentFont,
+                        
                         fontSize: 20,
                         color: AppColor.btnSubTextColor,
                       ),

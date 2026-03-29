@@ -97,7 +97,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                         widget.month.monthName,
                         style: const TextStyle(
                           fontSize: 24,
-                          fontFamily: AppComponents.accentFont,
+                          
                           fontWeight: FontWeight.w400,
                           color: AppColor.btnTextColor,
                           height: 1.2,
@@ -176,8 +176,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                                           day.time,
                                           style: const TextStyle(
                                             fontSize: 18,
-                                            fontFamily:
-                                                AppComponents.accentFont,
+                                            
                                             color: AppColor.subTextColor,
                                           ),
                                         ),

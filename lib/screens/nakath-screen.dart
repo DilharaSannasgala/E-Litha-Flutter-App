@@ -66,10 +66,10 @@ class _NakathScreenState extends State<NakathScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "kele;a iSÜgqj - 2026",
+          "නැකැත් සීට්ටුව - 2026",
           style: TextStyle(
             fontSize: 25,
-            fontFamily: AppComponents.accentFont,
+            
             color: AppColor.btnTextColor,
           ),
         ),
@@ -85,17 +85,17 @@ class _NakathScreenState extends State<NakathScreen> {
                       borderRadius: BorderRadius.circular(16)),
                   backgroundColor: Colors.white,
                   title: Text(
-                    "ie,lsh hq;=",
+                    "සැලකිය යුතු",
                     style: TextStyle(
-                      fontFamily: AppComponents.accentFont,
+                      
                       fontSize: 20,
                       color: AppColor.btnTextColor,
                     ),
                   ),
                   content: Text(
-                    "fuu kele;a fõ,djka oekg iïu; Trf,daiq fõ,dfjka ilia lr we;s w;r fuu fõ,djka Y%S ,xldfõ ish¨ m%foaYj,g fkdfjkiaj Ndú; l, yelsh-",
+                    "මෙම නැකැත් වේලාවන් දැනට සම්මත ඔරලෝසු වේලාවෙන් සකස් කර ඇති අතර මෙම වේලාවන් ශ‍්‍රී ලංකාවේ සියලූ ප‍්‍රදේශවලට නොවෙනස්ව භාවිත කල හැකිය-",
                     style: TextStyle(
-                      fontFamily: AppComponents.accentFont,
+                      
                       fontSize: 16,
                       color: AppColor.btnSubTextColor,
                       height: 1.4,
@@ -105,10 +105,10 @@ class _NakathScreenState extends State<NakathScreen> {
                     TextButton(
                       onPressed: () => Navigator.of(context).pop(),
                       child: Text(
-                        "jikak",
+                        "වසන්න",
                         style: TextStyle(
                           color: AppColor.btnTextColor,
-                          fontFamily: AppComponents.accentFont,
+                          
                         ),
                       ),
                     ),
