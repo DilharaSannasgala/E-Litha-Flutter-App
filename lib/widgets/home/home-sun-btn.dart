@@ -36,30 +36,34 @@ Widget buildSunButton(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(height: 10),
-                  Text(
-                    firstLine,
-                    style: TextStyle(
-                      
-                      color: AppColor.btnTextColor,
-                      fontSize: 22,
-                      height: 1.2,
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(height: 10),
+                    Text(
+                      firstLine,
+                      style: TextStyle(
+                        color: AppColor.btnTextColor,
+                        fontSize: 22,
+                        height: 1.2,
+                        fontWeight: FontWeight.w500,
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                  Text(
-                    secondLine,
-                    style: TextStyle(
-                      
-                      color: AppColor.btnTextColor,
-                      fontSize: 30,
-                      height: 1.0,
+                    Text(
+                      secondLine,
+                      style: TextStyle(
+                        color: AppColor.btnTextColor,
+                        fontSize: 30,
+                        height: 1.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 15.0),

@@ -14,17 +14,29 @@ class NakathScreen extends StatefulWidget {
   State<NakathScreen> createState() => _NakathScreenState();
 }
 
-class _NakathScreenState extends State<NakathScreen> {
+class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderStateMixin {
   List<SpecialNakathDateInfo> specialDates = [];
   bool isLoading = true;
   
   // Define maximum tablet vertical width
   final double maxTabletWidth = 700.0;
 
+  late AnimationController _animationController;
+
   @override
   void initState() {
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    );
     _loadNakathData();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadNakathData() async {
@@ -40,6 +52,7 @@ class _NakathScreenState extends State<NakathScreen> {
             [];
         isLoading = false;
       });
+      _animationController.forward();
     } catch (e) {
       debugPrint('Error loading nakath data: $e');
       setState(() => isLoading = false);
@@ -129,8 +142,32 @@ class _NakathScreenState extends State<NakathScreen> {
                     padding: const EdgeInsets.all(16),
                     itemCount: specialDates.length,
                     itemBuilder: (context, index) {
-                      return CollapsibleNakathCard(
-                          specialDate: specialDates[index]);
+                      final double start = (index * 0.1).clamp(0.0, 0.8);
+                      final double end = (start + 0.2).clamp(0.0, 1.0);
+                      
+                      final Animation<double> itemFade = Tween<double>(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(
+                          parent: _animationController,
+                          curve: Interval(start, end, curve: Curves.easeOut),
+                        ),
+                      );
+                      
+                      final Animation<Offset> itemSlide = Tween<Offset>(begin: const Offset(0, 0.1), end: Offset.zero).animate(
+                        CurvedAnimation(
+                          parent: _animationController,
+                          curve: Interval(start, end, curve: Curves.easeOut),
+                        ),
+                      );
+
+                      return FadeTransition(
+                        opacity: itemFade,
+                        child: SlideTransition(
+                          position: itemSlide,
+                          child: CollapsibleNakathCard(
+                            specialDate: specialDates[index]
+                          ),
+                        ),
+                      );
                     },
                   ),
                 ),

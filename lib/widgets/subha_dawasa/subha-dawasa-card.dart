@@ -129,16 +129,17 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
 
               // Days list (animated)
               ClipRect(
-                child: AnimatedContainer(
+                child: AnimatedSize(
                   duration: const Duration(milliseconds: 300),
-                  height: _isExpanded && widget.month.days.isNotEmpty ? null : 0,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: widget.month.days
-                          .map(
-                            (day) => Padding(
+                  curve: Curves.easeInOut,
+                  child: _isExpanded && widget.month.days.isNotEmpty 
+                      ? Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: widget.month.days
+                                .map(
+                                  (day) => Padding(
                               padding:
                                   const EdgeInsets.symmetric(vertical: 12.0),
                               child: Row(
@@ -189,7 +190,8 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                           )
                           .toList(),
                     ),
-                  ),
+                  )
+                  : const SizedBox(width: double.infinity, height: 0),
                 ),
               ),
             ],

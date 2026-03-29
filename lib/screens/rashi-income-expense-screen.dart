@@ -12,16 +12,36 @@ class RashiTableScreen extends StatefulWidget {
   State<RashiTableScreen> createState() => _RashiTableScreenState();
 }
 
-class _RashiTableScreenState extends State<RashiTableScreen> {
+class _RashiTableScreenState extends State<RashiTableScreen> with SingleTickerProviderStateMixin {
   List<List<String>> tableData = [];
   bool isLoading = true;
 
   final double maxTabletWidth = 800.0;
 
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+  late Animation<Offset> _slideAnimation;
+
   @override
   void initState() {
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+    );
+    _slideAnimation = Tween<Offset>(begin: const Offset(0, 0.05), end: Offset.zero).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+    );
     _loadRashiTableData();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadRashiTableData() async {
@@ -37,6 +57,7 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
         );
         isLoading = false;
       });
+      _animationController.forward();
     } catch (e) {
       debugPrint("Error loading Rashi table: $e");
       setState(() => isLoading = false);
@@ -64,7 +85,7 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
         ),
       ),
       body: isLoading
-          ? CircularProgressIndicator(color: AppColor.accentColor)
+          ? Center(child: CircularProgressIndicator(color: AppColor.accentColor))
           : Align(
               alignment: Alignment.topCenter,
               child: Container(
@@ -72,45 +93,51 @@ class _RashiTableScreenState extends State<RashiTableScreen> {
                 child: SafeArea(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.all(16),
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.05),
-                                blurRadius: 8,
-                                offset: const Offset(0, 3),
-                              ),
-                            ],
-                            border: Border.all(
-                              color: AppColor.borderLightColor,
-                              width: 2,
-                            ),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: Column(
-                              children: [
-                                RashiTableWidget(tableData: tableData),
-                                const SizedBox(height: 20),
-                                Text(
-                                  'රාශි අය වැය මගින් මෙම වසරෙ ඔබගේ රාශියට අනුව අය වැය පෙන්වයි',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    
-                                    color: AppColor.btnSubTextColor,
-                                    height: 1.5,
+                    child: FadeTransition(
+                      opacity: _fadeAnimation,
+                      child: SlideTransition(
+                        position: _slideAnimation,
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(16),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.05),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 3),
                                   ),
-                                  textAlign: TextAlign.center,
+                                ],
+                                border: Border.all(
+                                  color: AppColor.borderLightColor,
+                                  width: 2,
                                 ),
-                              ],
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                child: Column(
+                                  children: [
+                                    RashiTableWidget(tableData: tableData),
+                                    const SizedBox(height: 20),
+                                    Text(
+                                      'රාශි අය වැය මගින් මෙම වසරෙ ඔබගේ රාශියට අනුව අය වැය පෙන්වයි',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        
+                                        color: AppColor.btnSubTextColor,
+                                        height: 1.5,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
-                          ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ),

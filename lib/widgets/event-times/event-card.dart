@@ -162,19 +162,19 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
 
               // Dates list (animated)
               ClipRect(
-                child: AnimatedContainer(
+                child: AnimatedSize(
                   duration: const Duration(milliseconds: 300),
-                  height: _isExpanded && widget.eventTimeInfo.dates.isNotEmpty
-                      ? null // Auto height
-                      : 0, // Collapsed
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    child: Column(
-                      children: widget.eventTimeInfo.dates.map((date) {
-                        return EventDateRow(date: date);
-                      }).toList(),
-                    ),
-                  ),
+                  curve: Curves.easeInOut,
+                  child: _isExpanded && widget.eventTimeInfo.dates.isNotEmpty
+                      ? Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                          child: Column(
+                            children: widget.eventTimeInfo.dates.map((date) {
+                              return EventDateRow(date: date);
+                            }).toList(),
+                          ),
+                        )
+                      : const SizedBox(width: double.infinity, height: 0),
                 ),
               ),
             ],

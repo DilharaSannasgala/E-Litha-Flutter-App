@@ -13,16 +13,28 @@ class EventTimeScreen extends StatefulWidget {
   State<EventTimeScreen> createState() => _EventTimeScreenState();
 }
 
-class _EventTimeScreenState extends State<EventTimeScreen> {
+class _EventTimeScreenState extends State<EventTimeScreen> with SingleTickerProviderStateMixin {
   List<EventTimeInfo> eventTimes = [];
   bool isLoading = false;
   
   final double maxTabletWidth = 700.0;
+  
+  late AnimationController _animationController;
 
   @override
   void initState() {
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1200),
+    );
     _loadEventTimeData();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadEventTimeData() async {
@@ -38,6 +50,7 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
             [];
         isLoading = false;
       });
+      _animationController.forward();
     } catch (e) {
       debugPrint('Error loading event time data: $e');
       setState(() => isLoading = false);
@@ -83,8 +96,31 @@ class _EventTimeScreenState extends State<EventTimeScreen> {
                     padding: const EdgeInsets.all(16),
                     itemCount: eventTimes.length,
                     itemBuilder: (context, index) {
-                      return CollapsibleEventCard(
-                        eventTimeInfo: eventTimes[index],
+                      final double start = (index * 0.1).clamp(0.0, 0.8);
+                      final double end = (start + 0.2).clamp(0.0, 1.0);
+                      
+                      final Animation<double> itemFade = Tween<double>(begin: 0.0, end: 1.0).animate(
+                        CurvedAnimation(
+                          parent: _animationController,
+                          curve: Interval(start, end, curve: Curves.easeOut),
+                        ),
+                      );
+                      
+                      final Animation<Offset> itemSlide = Tween<Offset>(begin: const Offset(0, 0.1), end: Offset.zero).animate(
+                        CurvedAnimation(
+                          parent: _animationController,
+                          curve: Interval(start, end, curve: Curves.easeOut),
+                        ),
+                      );
+
+                      return FadeTransition(
+                        opacity: itemFade,
+                        child: SlideTransition(
+                          position: itemSlide,
+                          child: CollapsibleEventCard(
+                            eventTimeInfo: eventTimes[index],
+                          ),
+                        ),
                       );
                     },
                   ),

@@ -150,23 +150,22 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
 
               // Description (animated)
               ClipRect(
-                child: AnimatedContainer(
+                child: AnimatedSize(
                   duration: const Duration(milliseconds: 300),
-                  height:
-                      _isExpanded && widget.specialDate.description.isNotEmpty
-                          ? null // Auto height
-                          : 0, // Collapsed
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    child: Text(
-                      widget.specialDate.description,
-                      style: TextStyle(
-                        
-                        fontSize: 20,
-                        color: AppColor.btnSubTextColor,
-                      ),
-                    ),
-                  ),
+                  curve: Curves.easeInOut,
+                  child: _isExpanded && widget.specialDate.description.isNotEmpty
+                      ? Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                          child: Text(
+                            widget.specialDate.description,
+                            style: TextStyle(
+                              
+                              fontSize: 20,
+                              color: AppColor.btnSubTextColor,
+                            ),
+                          ),
+                        )
+                      : const SizedBox(width: double.infinity, height: 0),
                 ),
               ),
             ],

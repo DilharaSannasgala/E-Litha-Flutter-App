@@ -50,7 +50,7 @@ class _CalendarScreenState extends State<CalendarScreen>
     // Initialize animation controller
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 300),
+      duration: Duration(milliseconds: 600),
     );
     _animation =
         Tween<double>(begin: 0.8, end: 1.0).animate(_animationController);
@@ -280,9 +280,9 @@ class _CalendarScreenState extends State<CalendarScreen>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black12,
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 8,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           )
         ],
       ),
@@ -389,9 +389,9 @@ class _CalendarScreenState extends State<CalendarScreen>
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: Colors.black12,
+              color: Colors.black.withOpacity(0.05),
               blurRadius: 8,
-              offset: Offset(0, 3),
+              offset: const Offset(0, 3),
             )
           ],
           border: Border.all(
@@ -446,13 +446,36 @@ class _CalendarScreenState extends State<CalendarScreen>
       physics: AlwaysScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         final event = events[index];
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: SpecialDateCard(
-            date: event.date.toString(),
-            month: event.month,
-            description: event.description,
-            isHoliday: event.isHoliday,
+        final double start = (index * 0.1).clamp(0.0, 0.8);
+        final double end = (start + 0.2).clamp(0.0, 1.0);
+        
+        final Animation<double> itemFade = Tween<double>(begin: 0.0, end: 1.0).animate(
+          CurvedAnimation(
+            parent: _animationController,
+            curve: Interval(start, end, curve: Curves.easeOut),
+          ),
+        );
+        
+        final Animation<Offset> itemSlide = Tween<Offset>(begin: const Offset(0, 0.1), end: Offset.zero).animate(
+          CurvedAnimation(
+            parent: _animationController,
+            curve: Interval(start, end, curve: Curves.easeOut),
+          ),
+        );
+
+        return FadeTransition(
+          opacity: itemFade,
+          child: SlideTransition(
+            position: itemSlide,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: SpecialDateCard(
+                date: event.date.toString(),
+                month: event.month,
+                description: event.description,
+                isHoliday: event.isHoliday,
+              ),
+            ),
           ),
         );
       },

@@ -9,8 +9,47 @@ import 'package:e_litha/widgets/home/home-nakath-btn.dart';
 import 'package:e_litha/widgets/home/home-sun-btn.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
   final CustomDateTime customDateTime = CustomDateTime();
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+  late Animation<Offset> _slideAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 800),
+    );
+
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _animationController,
+        curve: const Interval(0.0, 1.0, curve: Curves.easeOut),
+      ),
+    );
+
+    _slideAnimation = Tween<Offset>(begin: const Offset(0, 0.05), end: Offset.zero).animate(
+      CurvedAnimation(
+        parent: _animationController,
+        curve: const Interval(0.0, 1.0, curve: Curves.easeOut),
+      ),
+    );
+
+    _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,32 +76,36 @@ class HomePage extends StatelessWidget {
                 return Center(
                   child: Container(
                     width: usedWidth,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        _buildHeaderSection(),
-                        SizedBox(height: 20),
-                        calenderButton(
-                          context,
-                          textTitle: 'දින දර්ශනය',
-                          textYear: "2026",
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/calendar');
-                          },
-                        ),
-                        SizedBox(height: 20),
-                        _buildMainSectionTitle(),
-                        SizedBox(height: 20),
-                        nakathButton(
-                          context,
-                          textTitle: 'අලුත් අවුරුදු',
-                          textYear: 'නැකැත් සීට්ටුව',
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/nakath');
-                          },
-                        ),
-                        SizedBox(height: 20),
-                        GridView.builder(
+                    child: FadeTransition(
+                      opacity: _fadeAnimation,
+                      child: SlideTransition(
+                        position: _slideAnimation,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            _buildHeaderSection(),
+                            SizedBox(height: 25),
+                            calenderButton(
+                              context,
+                              textTitle: 'දින දර්ශනය',
+                              textYear: "2026",
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/calendar');
+                              },
+                            ),
+                            SizedBox(height: 25),
+                            _buildMainSectionTitle(),
+                            SizedBox(height: 20),
+                            nakathButton(
+                              context,
+                              textTitle: 'අලුත් අවුරුදු',
+                              textYear: 'නැකැත් සීට්ටුව',
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/nakath');
+                              },
+                            ),
+                            SizedBox(height: 25),
+                            GridView.builder(
                             shrinkWrap: true,
                             physics: NeverScrollableScrollPhysics(),
                             gridDelegate:
@@ -106,6 +149,8 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                ),
                 );
               },
             ),
@@ -127,18 +172,25 @@ class HomePage extends StatelessWidget {
         Text(
           'ආයුබෝවන්',
           style: TextStyle(
-              
-              fontSize: 50,
+              fontSize: 48,
               color: AppColor.titleTextColor,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 1),
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5),
         ),
-        Text(
-          '${now.day} ${customDay} ${customMonth} ${now.year} ~ ශ්‍රී බුද්ධ වර්ෂ ${customYear}',
-          style: TextStyle(
-            
-            fontSize: 20,
-            color: AppColor.titleTextColor,
+        const SizedBox(height: 5),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: AppColor.accentColor.withOpacity(0.3)),
+          ),
+          child: Text(
+            '${now.day} $customDay $customMonth ${now.year} ~ ශ්‍රී බුද්ධ වර්ෂ $customYear',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: AppColor.accentColor,
+            ),
           ),
         ),
       ],
@@ -147,14 +199,27 @@ class HomePage extends StatelessWidget {
 
   Widget _buildMainSectionTitle() {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0, bottom: 10.0, top: 15.0),
-      child: Text(
-        'පලාපල ලිත',
-        style: TextStyle(
-          fontSize: 28,
-          
-          color: AppColor.subTextColor,
-        ),
+      padding: const EdgeInsets.only(left: 8.0, bottom: 5.0, top: 10.0),
+      child: Row(
+        children: [
+          Container(
+            width: 4,
+            height: 24,
+            decoration: BoxDecoration(
+              color: AppColor.accentColor,
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            'පලාපල ලිත',
+            style: TextStyle(
+              fontSize: 26,
+              fontWeight: FontWeight.w600,
+              color: AppColor.titleTextColor,
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -12,17 +12,37 @@ class AnnualSummaryScreen extends StatefulWidget {
   State<AnnualSummaryScreen> createState() => _AnnualSummaryScreenState();
 }
 
-class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
+class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTickerProviderStateMixin {
   late AnnualSummaryModel summaryData;
   bool isLoading = true;
   String? errorMessage;
   
   final double maxTabletWidth = 700.0;
 
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+  late Animation<Offset> _slideAnimation;
+
   @override
   void initState() {
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 600),
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+    );
+    _slideAnimation = Tween<Offset>(begin: const Offset(0, 0.05), end: Offset.zero).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeOut),
+    );
     loadData();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    super.dispose();
   }
 
   Future<void> loadData() async {
@@ -35,6 +55,7 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
         summaryData = AnnualSummaryModel.fromJson(summaryJson);
         isLoading = false;
       });
+      _animationController.forward();
     } catch (e) {
       setState(() {
         errorMessage = 'Error loading data: $e';
@@ -77,9 +98,15 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
                         errorMessage!,
                         style: const TextStyle(color: Colors.red),
                       )
-                    : SingleChildScrollView(
-                        padding: const EdgeInsets.all(16),
-                        child: _buildSummarySection(),
+                    : FadeTransition(
+                        opacity: _fadeAnimation,
+                        child: SlideTransition(
+                          position: _slideAnimation,
+                          child: SingleChildScrollView(
+                            padding: const EdgeInsets.all(16),
+                            child: _buildSummarySection(),
+                          ),
+                        ),
                       ),
           ),
         ),
@@ -114,29 +141,34 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> {
                 topRight: Radius.circular(14),
               ),
             ),
-            height: 50,
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
             width: double.infinity,
             alignment: Alignment.center,
-            child: Text(
-              summaryData.title,
-              style: const TextStyle(
-                fontSize: 22,
-                
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-              ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  summaryData.title,
+                  style: const TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(24.0),
             child: Column(
               children: [
                 Text(
                   summaryData.content,
                   style: const TextStyle(
-                    fontSize: 19,
+                    fontSize: 18,
                     color: AppColor.btnSubTextColor,
-                    height: 1.6,
+                    height: 1.8,
                   ),
                   textAlign: TextAlign.justify,
                 ),

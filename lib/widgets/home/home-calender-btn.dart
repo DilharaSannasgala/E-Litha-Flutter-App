@@ -41,41 +41,51 @@ Widget calenderButton(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Container(
-                    width: 58,
-                    height: 58,
-                    child: SvgPicture.asset(
-                      AppComponents.calenderIcon,
+              Expanded(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 65,
+                      height: 65,
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset(
+                        AppComponents.calenderIcon,
+                      ),
                     ),
-                  ),
-                  SizedBox(width: 16),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        textTitle,
-                        style: TextStyle(
-                          color: Colors.white,
-                          
-                          fontSize: 24,
-                          height: 1.0,
-                        ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            textTitle,
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.9),
+                              fontSize: 22,
+                              height: 1.2,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          SizedBox(height: 2),
+                          Text(
+                            textYear,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 44,
+                              height: 1.0,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2,
+                            ),
+                          ),
+                        ],
                       ),
-                      SizedBox(height: 4),
-                      Text(
-                        textYear,
-                        style: TextStyle(
-                          color: Colors.white,
-                          
-                          fontSize: 40,
-                          height: 1.0,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
               Container(
                 width: 30,
