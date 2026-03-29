@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 
 class MonthNavigation extends StatelessWidget {
   final String month;

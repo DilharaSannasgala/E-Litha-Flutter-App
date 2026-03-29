@@ -1,6 +1,5 @@
 import 'package:e_litha/models/rahukalaya-model.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 import 'package:flutter/material.dart';
 
 class RahuKalayaTableWidget extends StatelessWidget {

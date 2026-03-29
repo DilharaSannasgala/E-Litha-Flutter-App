@@ -3,7 +3,6 @@ import 'package:e_litha/models/holiday-info-model.dart';
 import 'package:e_litha/models/special-date-info.dart';
 import 'package:flutter/material.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 
 class CalendarGrid extends StatelessWidget {
   final int year;

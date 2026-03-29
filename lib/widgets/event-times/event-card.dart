@@ -1,6 +1,5 @@
 import 'package:e_litha/models/event-time-model.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/widgets/event-times/event-card-expandable-section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

@@ -2,9 +2,7 @@ import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/services/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:awesome_notifications/awesome_notifications.dart';
 import 'dart:async';
-import 'dart:convert';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});

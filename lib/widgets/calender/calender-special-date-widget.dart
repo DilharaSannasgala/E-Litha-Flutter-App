@@ -1,7 +1,6 @@
 import 'package:e_litha/models/holiday-info-model.dart';
 import 'package:e_litha/models/special-date-info.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
 import 'package:flutter/material.dart';
 

@@ -1,6 +1,5 @@
 import 'package:e_litha/models/subha-dawasa-model.dart';
 import 'package:e_litha/utils/app-color.dart';
-import 'package:e_litha/utils/app-component.dart';
 import 'package:flutter/material.dart';
 
 class CollapsibleSubhaDawasaCard extends StatefulWidget {
