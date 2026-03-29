@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 
 // Main screen widget
 class NakathScreen extends StatefulWidget {
-  const NakathScreen({Key? key}) : super(key: key);
+  const NakathScreen({super.key});
 
   @override
   State<NakathScreen> createState() => _NakathScreenState();

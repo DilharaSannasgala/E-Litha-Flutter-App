@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import '../utils/app-component.dart';
 
 class EventTimeScreen extends StatefulWidget {
-  const EventTimeScreen({Key? key}) : super(key: key);
+  const EventTimeScreen({super.key});
 
   @override
   State<EventTimeScreen> createState() => _EventTimeScreenState();

@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class RahuKalayaScreen extends StatefulWidget {
-  const RahuKalayaScreen({Key? key}) : super(key: key);
+  const RahuKalayaScreen({super.key});
 
   @override
   State<RahuKalayaScreen> createState() => _RahuKalayaScreenState();

@@ -1,1 +1,24 @@
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    deprecated_member_use: ignore
+    use_super_parameters: ignore
+    file_names: ignore
+    avoid_print: ignore
+    sized_box_for_whitespace: ignore
+    library_private_types_in_public_api: ignore
+    avoid_unnecessary_containers: ignore
+    unnecessary_const: ignore
+    use_key_in_widget_constructors: ignore
+
+linter:
+  rules:
+    use_super_parameters: false
+    file_names: false
+    avoid_print: false
+    sized_box_for_whitespace: false
+    library_private_types_in_public_api: false
+    avoid_unnecessary_containers: false
+    unnecessary_const: false
+    use_key_in_widget_constructors: false

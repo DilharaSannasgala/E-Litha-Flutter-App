@@ -13,6 +13,8 @@ import 'package:e_litha/widgets/calender/calender-moon-phase-widget.dart';
 import 'package:e_litha/widgets/calender/calender-special-date-widget.dart';
 
 class CalendarScreen extends StatefulWidget {
+  const CalendarScreen({super.key});
+
   @override
   _CalendarScreenState createState() => _CalendarScreenState();
 }

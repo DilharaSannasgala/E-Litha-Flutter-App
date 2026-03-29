@@ -7,7 +7,7 @@ import 'package:flutter/services.dart';
 import '../utils/app-component.dart';
 
 class SubhaDawasaScreen extends StatefulWidget {
-  const SubhaDawasaScreen({Key? key}) : super(key: key);
+  const SubhaDawasaScreen({super.key});
 
   @override
   State<SubhaDawasaScreen> createState() => _SubhaDawasaScreenState();

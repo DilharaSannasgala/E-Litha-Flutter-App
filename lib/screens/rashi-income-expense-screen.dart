@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class RashiTableScreen extends StatefulWidget {
-  const RashiTableScreen({Key? key}) : super(key: key);
+  const RashiTableScreen({super.key});
 
   @override
   State<RashiTableScreen> createState() => _RashiTableScreenState();

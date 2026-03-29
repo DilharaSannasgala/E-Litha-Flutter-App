@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class AnnualSummaryScreen extends StatefulWidget {
-  const AnnualSummaryScreen({Key? key}) : super(key: key);
+  const AnnualSummaryScreen({super.key});
 
   @override
   State<AnnualSummaryScreen> createState() => _AnnualSummaryScreenState();
