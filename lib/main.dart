@@ -39,6 +39,25 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'AbhayaLibre',
       ),
+      builder: (context, child) {
+        final mediaQueryData = MediaQuery.of(context);
+        
+        // Base screen width for your design (e.g., standard mobile screen like iPhone X/11/13 is ~375)
+        double scaleFactor = mediaQueryData.size.width / 375.0;
+        
+        // Clamp it to prevent text from being too tiny on small phones, or way too large on tablets
+        scaleFactor = scaleFactor.clamp(0.85, 1.3);
+
+        // Combine our responsive scale with the user's system text scaling preference (accessibility)
+        final double systemTextScale = mediaQueryData.textScaler.scale(1);
+
+        return MediaQuery(
+          data: mediaQueryData.copyWith(
+            textScaler: TextScaler.linear(systemTextScale * scaleFactor),
+          ),
+          child: child!,
+        );
+      },
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
