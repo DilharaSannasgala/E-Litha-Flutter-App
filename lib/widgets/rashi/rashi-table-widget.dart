@@ -1,4 +1,5 @@
 import 'package:e_litha/utils/app-color.dart';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class RashiTableWidget extends StatelessWidget {
@@ -8,16 +9,21 @@ class RashiTableWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.shade300, width: 1),
-        borderRadius: BorderRadius.circular(4),
-      ),
-      child: Table(
-        border: TableBorder.all(
-          color: Colors.grey.shade300,
-          width: 1,
-        ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: AppColor.tableBorderColor, width: 1.5),
+            borderRadius: BorderRadius.circular(8),
+            color: AppColor.isDark ? Colors.black.withOpacity(0.2) : Colors.white.withOpacity(0.3),
+          ),
+          child: Table(
+            border: TableBorder.all(
+              color: AppColor.tableBorderColor,
+              width: 1,
+            ),
         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
         columnWidths: const {
           0: FlexColumnWidth(2),
@@ -32,10 +38,10 @@ class RashiTableWidget extends StatelessWidget {
           return TableRow(
             decoration: BoxDecoration(
               color: isHeader
-                  ? AppColor.btnTextColor
+                  ? AppColor.tableHeaderColor
                   : (rowIndex % 2 == 0
-                      ? Colors.white
-                      : const Color(0xFFF9F3E6)),
+                      ? AppColor.tableRowColor1
+                      : AppColor.tableRowColor2),
             ),
             children: List.generate(6, (colIndex) {
               return Container(
@@ -47,7 +53,7 @@ class RashiTableWidget extends StatelessWidget {
                   style: TextStyle(
                     
                     fontSize: isHeader ? 18 : 16,
-                    color: isHeader ? Colors.white : AppColor.btnTextColor,
+                    color: isHeader ? AppColor.tableHeaderTextColor : AppColor.btnTextColor,
                     fontWeight: isHeader || colIndex == 0 || colIndex == 3
                         ? FontWeight.bold
                         : FontWeight.normal,
@@ -58,6 +64,8 @@ class RashiTableWidget extends StatelessWidget {
             }),
           );
         }),
+      ),
+        ),
       ),
     );
   }
@@ -87,7 +95,7 @@ class TableCellWidget extends StatelessWidget {
         style: TextStyle(
           
           fontSize: isHeader ? 20 : 16,
-          color: isHeader ? Colors.white : AppColor.btnTextColor,
+          color: isHeader ? AppColor.tableHeaderTextColor : AppColor.btnTextColor,
           fontWeight:
               isHeader || isRashiName ? FontWeight.bold : FontWeight.normal,
         ),

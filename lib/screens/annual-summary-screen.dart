@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:e_litha/models/annual-summary-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
@@ -69,55 +69,89 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTi
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.bgColor,
-      appBar: AppBar(
-        backgroundColor: AppColor.bgColor,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColor.btnTextColor),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text(
-          'සංවත්සර පලාපල',
-          style: TextStyle(
-            fontSize: 25,
-            
-            color: AppColor.btnTextColor,
-          ),
-        ),
-      ),
-      body: SafeArea(
-        child: Center(
-          child: Container(
-            constraints: BoxConstraints(maxWidth: maxTabletWidth),
-            child: isLoading
-                ? const CircularProgressIndicator(
-                    color: AppColor.accentColor,
-                  )
-                : errorMessage != null
-                    ? Text(
-                        errorMessage!,
-                        style: const TextStyle(color: Colors.red),
-                      )
-                    : FadeTransition(
-                        opacity: _fadeAnimation,
-                        child: SlideTransition(
-                          position: _slideAnimation,
-                          child: SingleChildScrollView(
-                            padding: const EdgeInsets.all(16),
-                            child: _buildSummarySection(),
+      body: isLoading
+          ? Center(
+              child: CircularProgressIndicator(
+                color: AppColor.accentColor,
+              ),
+            )
+          : errorMessage != null
+              ? Center(
+                  child: Text(
+                    errorMessage!,
+                    style: const TextStyle(color: Colors.red),
+                  ),
+                )
+              : CustomScrollView(
+                  slivers: [
+                    SliverAppBar(
+                      backgroundColor: AppColor.bgColor,
+                      expandedHeight: 200.0,
+                      floating: false,
+                      pinned: true,
+                      elevation: 0,
+                      leading: IconButton(
+                        icon: Icon(Icons.arrow_back, color: AppColor.btnTextColor),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                      flexibleSpace: FlexibleSpaceBar(
+                        title: Text(
+                          "සංවත්සර පලාපල",
+                          style: TextStyle(
+                            fontSize: 22,
+                            color: AppColor.btnTextColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        centerTitle: true,
+                        background: Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [
+                                AppColor.accentColor.withOpacity(0.3),
+                                AppColor.bgColor,
+                              ],
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.wb_sunny_rounded,
+                            size: 100,
+                            color: AppColor.accentColor.withOpacity(0.2),
                           ),
                         ),
                       ),
-          ),
-        ),
-      ),
+                    ),
+                    SliverToBoxAdapter(
+                      child: SafeArea(
+                        top: false,
+                        child: Center(
+                          child: Container(
+                            constraints: BoxConstraints(maxWidth: maxTabletWidth),
+                            child: FadeTransition(
+                              opacity: _fadeAnimation,
+                              child: SlideTransition(
+                                position: _slideAnimation,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16),
+                                  child: _buildSummarySection(),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
     );
   }
 
   Widget _buildSummarySection() {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -134,7 +168,7 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTi
       child: Column(
         children: [
           Container(
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: AppColor.btnTextColor,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(14),
@@ -149,10 +183,10 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTi
               children: [
                 Text(
                   summaryData.title,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: AppColor.cardColor,
                     letterSpacing: 0.5,
                   ),
                 ),
@@ -165,7 +199,7 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTi
               children: [
                 Text(
                   summaryData.content,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 18,
                     color: AppColor.btnSubTextColor,
                     height: 1.8,
@@ -180,3 +214,6 @@ class _AnnualSummaryScreenState extends State<AnnualSummaryScreen> with SingleTi
     );
   }
 }
+
+
+

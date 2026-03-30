@@ -1,4 +1,5 @@
-import 'package:e_litha/utils/app-component.dart';
+﻿import 'package:e_litha/utils/app-component.dart';
+import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/services/notification_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -94,7 +95,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
                   width: 30,
                   height: 30,
                   child: CircularProgressIndicator(
-                    color: Colors.white,
+                    color: AppColor.cardColor,
                     strokeWidth: 2,
                   ),
                 ),

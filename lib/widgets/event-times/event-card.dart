@@ -1,4 +1,4 @@
-import 'package:e_litha/models/event-time-model.dart';
+﻿import 'package:e_litha/models/event-time-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/widgets/event-times/event-card-expandable-section.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +60,7 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
       duration: const Duration(milliseconds: 500),
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -122,7 +122,7 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
                               padding: const EdgeInsets.only(top: 8),
                               child: Text(
                                 widget.eventTimeInfo.title,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontSize: 24,
                                   
                                   fontWeight: FontWeight.w400,
@@ -137,16 +137,16 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
                           Container(
                             width: 40,
                             height: 40,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: AppColor.accentColor,
                               shape: BoxShape.circle,
                             ),
                             child: Center(
                               child: RotationTransition(
                                 turns: _rotationAnimation,
-                                child: const Icon(
+                                child: Icon(
                                   Icons.keyboard_arrow_down_rounded,
-                                  color: Colors.white,
+                                  color: AppColor.cardColor,
                                   size: 24,
                                 ),
                               ),
@@ -183,3 +183,5 @@ class _CollapsibleEventCardState extends State<CollapsibleEventCard>
     );
   }
 }
+
+

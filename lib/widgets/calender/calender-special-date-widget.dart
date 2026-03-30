@@ -1,4 +1,4 @@
-import 'package:e_litha/models/holiday-info-model.dart';
+﻿import 'package:e_litha/models/holiday-info-model.dart';
 import 'package:e_litha/models/special-date-info.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
@@ -96,7 +96,7 @@ class SpecialDateCard extends StatelessWidget {
     
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(

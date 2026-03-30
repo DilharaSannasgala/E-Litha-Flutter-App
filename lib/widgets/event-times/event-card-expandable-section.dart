@@ -1,4 +1,4 @@
-import 'package:e_litha/models/event-time-model.dart';
+﻿import 'package:e_litha/models/event-time-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +23,7 @@ class EventDateRow extends StatelessWidget {
             width: 60,
             height: 60,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: AppColor.cardColor,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: AppColor.iconBgColor,
@@ -35,7 +35,7 @@ class EventDateRow extends StatelessWidget {
               children: [
                 Text(
                   CustomDateTime().getCustomMonthShort(date.month),
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 16,
                     
                     color: AppColor.btnTextColor,
@@ -44,7 +44,7 @@ class EventDateRow extends StatelessWidget {
                 ),
                 Text(
                   date.day.toString(),
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 24,
                     
                     fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class EventDateRow extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 8.0),
               child: Text(
                 date.description,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 18,
                   
                   color: AppColor.btnSubTextColor,
@@ -77,3 +77,4 @@ class EventDateRow extends StatelessWidget {
     );
   }
 }
+

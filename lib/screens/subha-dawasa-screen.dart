@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:e_litha/models/subha-dawasa-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/widgets/subha_dawasa/subha-dawasa-card.dart';
@@ -74,10 +74,10 @@ class _SubhaDawasaScreenState extends State<SubhaDawasaScreen> with SingleTicker
         backgroundColor: AppColor.bgColor,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColor.btnTextColor),
+          icon: Icon(Icons.arrow_back, color: AppColor.btnTextColor),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
+        title: Text(
           'සුභ දවස් - 2026',
           style: TextStyle(
             fontSize: 25,
@@ -90,7 +90,7 @@ class _SubhaDawasaScreenState extends State<SubhaDawasaScreen> with SingleTicker
         child: Container(
           constraints: BoxConstraints(maxWidth: maxTabletWidth),
           child: isLoading
-              ? const CircularProgressIndicator(color: AppColor.accentColor)
+              ? CircularProgressIndicator(color: AppColor.accentColor)
               : SafeArea(
                   child: ListView.builder(
                     padding: const EdgeInsets.all(16),
@@ -129,3 +129,4 @@ class _SubhaDawasaScreenState extends State<SubhaDawasaScreen> with SingleTicker
     );
   }
 }
+

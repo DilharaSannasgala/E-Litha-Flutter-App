@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:e_litha/models/special-nakath-date-info.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
@@ -75,10 +75,10 @@ class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderSt
       appBar: AppBar(
         backgroundColor: AppColor.bgColor,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColor.btnTextColor),
+          icon: Icon(Icons.arrow_back, color: AppColor.btnTextColor),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
+        title: Text(
           "නැකැත් සීට්ටුව - 2026",
           style: TextStyle(
             fontSize: 25,
@@ -88,7 +88,7 @@ class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderSt
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.info_outline, color: AppColor.btnTextColor),
+            icon: Icon(Icons.info_outline, color: AppColor.btnTextColor),
             tooltip: 'Info',
             onPressed: () {
               showDialog(
@@ -96,7 +96,7 @@ class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderSt
                 builder: (context) => AlertDialog(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16)),
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColor.cardColor,
                   title: Text(
                     "සැලකිය යුතු",
                     style: TextStyle(
@@ -136,7 +136,7 @@ class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderSt
         child: Container(
           constraints: BoxConstraints(maxWidth: maxTabletWidth),
           child: isLoading
-              ? const CircularProgressIndicator(color: AppColor.accentColor)
+              ? CircularProgressIndicator(color: AppColor.accentColor)
               : SafeArea(
                   child: ListView.builder(
                     padding: const EdgeInsets.all(16),
@@ -176,3 +176,4 @@ class _NakathScreenState extends State<NakathScreen> with SingleTickerProviderSt
     );
   }
 }
+

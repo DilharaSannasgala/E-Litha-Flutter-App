@@ -4,6 +4,7 @@ import 'package:e_litha/widgets/home/home-calender-btn.dart';
 import 'package:e_litha/widgets/home/home-nakath-btn.dart';
 import 'package:e_litha/widgets/home/home-sun-btn.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -88,6 +89,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                               textTitle: 'දින දර්ශනය',
                               textYear: "2026",
                               onPressed: () {
+                                HapticFeedback.lightImpact();
                                 Navigator.pushNamed(context, '/calendar');
                               },
                             ),
@@ -99,6 +101,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                               textTitle: 'අලුත් අවුරුදු',
                               textYear: 'නැකැත් සීට්ටුව',
                               onPressed: () {
+                                HapticFeedback.lightImpact();
                                 Navigator.pushNamed(context, '/nakath');
                               },
                             ),

@@ -1,4 +1,4 @@
-import 'package:e_litha/utils/app-color.dart';
+﻿import 'package:e_litha/utils/app-color.dart';
 import 'package:flutter/material.dart';
 
 class DateContainer extends StatelessWidget {
@@ -22,13 +22,15 @@ class DateContainer extends StatelessWidget {
           color: AppColor.iconBgColor,
           borderRadius: BorderRadius.circular(16),
         ),
-        padding: const EdgeInsets.all(10),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+        padding: const EdgeInsets.all(8),
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
             Text(
               month,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 
                 color: AppColor.btnTextColor,
@@ -37,7 +39,7 @@ class DateContainer extends StatelessWidget {
             ),
             Text(
               day,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 
                 fontWeight: FontWeight.bold,
@@ -47,6 +49,7 @@ class DateContainer extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

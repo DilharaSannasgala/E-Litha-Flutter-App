@@ -1,4 +1,4 @@
-import 'package:e_litha/models/subha-dawasa-model.dart';
+﻿import 'package:e_litha/models/subha-dawasa-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:flutter/material.dart';
 
@@ -59,7 +59,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
       duration: const Duration(milliseconds: 500),
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -94,7 +94,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                     Expanded(
                       child: Text(
                         widget.month.monthName,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 24,
                           
                           fontWeight: FontWeight.w400,
@@ -107,16 +107,16 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                     Container(
                       width: 40,
                       height: 40,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: AppColor.accentColor,
                         shape: BoxShape.circle,
                       ),
                       child: Center(
                         child: RotationTransition(
                           turns: _rotationAnimation,
-                          child: const Icon(
+                          child: Icon(
                             Icons.keyboard_arrow_down_rounded,
-                            color: Colors.white,
+                            color: AppColor.cardColor,
                             size: 24,
                           ),
                         ),
@@ -155,7 +155,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                                     child: Center(
                                       child: Text(
                                         day.day,
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                           color: AppColor.accentColor,
@@ -174,7 +174,7 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
                                         const SizedBox(height: 12),
                                         Text(
                                           day.time,
-                                          style: const TextStyle(
+                                          style: TextStyle(
                                             fontSize: 18,
                                             
                                             color: AppColor.subTextColor,
@@ -200,3 +200,6 @@ class _CollapsibleSubhaDawasaCardState extends State<CollapsibleSubhaDawasaCard>
     );
   }
 }
+
+
+

@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:e_litha/models/rahukalaya-model.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
@@ -79,11 +79,11 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> with SingleTickerPr
         backgroundColor: AppColor.bgColor,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColor.btnTextColor),
+          icon: Icon(Icons.arrow_back, color: AppColor.btnTextColor),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'රාහු කාලය - 2025',
+        title: Text(
+          'රාහු කාලය - 2026',
           style: TextStyle(
             fontSize: 25,
             
@@ -106,7 +106,7 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> with SingleTickerPr
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: AppColor.cardColor,
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: [
                         BoxShadow(
@@ -145,7 +145,7 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> with SingleTickerPr
                             textAlign: TextAlign.justify,
                           ),
                           const SizedBox(height: 30),
-                          const Text(
+                          Text(
                             'සත් දිනට මරු සිටින දිසාව',
                             style: TextStyle(
                               fontSize: 20,
@@ -156,7 +156,7 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> with SingleTickerPr
                           const SizedBox(height: 12),
                           const MaruSitinaDisawaWidget(),
                           const SizedBox(height: 30),
-                          const Text(
+                          Text(
                             'කාල හෝරාව',
                             style: TextStyle(
                               fontSize: 20,
@@ -181,3 +181,4 @@ class _RahuKalayaScreenState extends State<RahuKalayaScreen> with SingleTickerPr
     );
   }
 }
+

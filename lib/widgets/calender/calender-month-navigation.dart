@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:e_litha/utils/app-color.dart';
 
 class MonthNavigation extends StatelessWidget {
@@ -21,7 +21,7 @@ class MonthNavigation extends StatelessWidget {
         height: 50,
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColor.cardColor,
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
@@ -71,3 +71,4 @@ class MonthNavigation extends StatelessWidget {
     );
   }
 }
+

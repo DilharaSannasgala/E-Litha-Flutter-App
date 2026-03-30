@@ -1,4 +1,4 @@
-import 'package:e_litha/models/calender-day-odel.dart';
+﻿import 'package:e_litha/models/calender-day-odel.dart';
 import 'package:e_litha/models/holiday-info-model.dart';
 import 'package:e_litha/models/special-date-info.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +29,7 @@ class CalendarGrid extends StatelessWidget {
       width:
           isLandscape ? screenWidth * 0.95 : null, // Adjust width for landscape
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -232,3 +232,4 @@ class CalendarGrid extends StatelessWidget {
     );
   }
 }
+

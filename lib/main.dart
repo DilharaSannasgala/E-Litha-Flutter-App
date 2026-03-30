@@ -9,6 +9,7 @@ import 'package:e_litha/screens/rahu-kalaya-screen.dart';
 import 'package:e_litha/screens/rashi-income-expense-screen.dart';
 import 'package:e_litha/screens/subha-dawasa-screen.dart';
 import 'package:e_litha/services/notification_service.dart';
+import 'package:e_litha/utils/app-color.dart';
 import 'package:flutter/material.dart';
 
 
@@ -36,8 +37,16 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'E-Litha',
+      themeMode: ThemeMode.system,
       theme: ThemeData(
         fontFamily: 'AbhayaLibre',
+        scaffoldBackgroundColor: AppColor.bgColor,
+        pageTransitionsTheme: const PageTransitionsTheme(
+          builders: {
+            TargetPlatform.android: ZoomPageTransitionsBuilder(),
+            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+          },
+        ),
       ),
       builder: (context, child) {
         final mediaQueryData = MediaQuery.of(context);

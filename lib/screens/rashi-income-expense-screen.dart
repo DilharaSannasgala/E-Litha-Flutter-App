@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
 import 'package:e_litha/widgets/rashi/rashi-table-widget.dart';
@@ -72,11 +72,10 @@ class _RashiTableScreenState extends State<RashiTableScreen> with SingleTickerPr
         backgroundColor: AppColor.bgColor,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: AppColor.btnTextColor),
+          icon: Icon(Icons.arrow_back, color: AppColor.btnTextColor),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'රාශි අය වැය (2026/27)',
+        title: Text('රාශි අය වැය (2026/27)',
           style: TextStyle(
             fontSize: 25,
             
@@ -101,7 +100,7 @@ class _RashiTableScreenState extends State<RashiTableScreen> with SingleTickerPr
                           children: [
                             Container(
                               decoration: BoxDecoration(
-                                color: Colors.white,
+                                color: AppColor.cardColor,
                                 borderRadius: BorderRadius.circular(16),
                                 boxShadow: [
                                   BoxShadow(
@@ -146,3 +145,6 @@ class _RashiTableScreenState extends State<RashiTableScreen> with SingleTickerPr
     );
   }
 }
+
+
+

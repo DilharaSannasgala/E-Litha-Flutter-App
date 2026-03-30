@@ -9,12 +9,15 @@ E-Litha is a localized Sri Lankan **Avurudu Litha** mobile application built usi
 - Features unique Avurudu events, public holidays, and Nakath timings relevant to local traditions.
 
 ## ✨ Features
-- **Online Avurudu Litha**: Modern digital replacement for the traditional paper-based Litha.
+- **Modern Digital Litha**: A fully digital replacement for the traditional paper-based Litha.
+- **Premium UI**: Interactive design with frosted glass components, haptic feedback, and modern animations.
+- **Automated Dark Mode**: Intelligent Light/Dark mode syncing with the device's system themes, featuring custom high-contrast golden accents and sleek, dark-tinted backgrounds.
+- **Global Responsive Text Scaling**: Typography that automatically scales consistently across any device, from small phones to large tablets.
 - **Automatic Notifications**:
   - Special date alerts
   - Holiday reminders
   - Nakath notifications (including 1 hour prior reminders)
-- **Offline View**: Users can view information offline.
+
 
 ## ⚡ Getting Started
 

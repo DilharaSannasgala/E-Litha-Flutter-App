@@ -1,4 +1,4 @@
-import 'package:e_litha/models/special-nakath-date-info.dart';
+﻿import 'package:e_litha/models/special-nakath-date-info.dart';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/custom-date-time.dart';
 import 'package:e_litha/widgets/nakath/nakath-date-container.dart';
@@ -60,7 +60,7 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
       duration: const Duration(milliseconds: 500),
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -111,7 +111,7 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
                               padding: const EdgeInsets.only(top: 8),
                               child: Text(
                                 widget.specialDate.name,
-                                style: const TextStyle(
+                                style: TextStyle(
                                     fontSize: 24,
                                     
                                     fontWeight: FontWeight.w400,
@@ -125,16 +125,16 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
                           Container(
                             width: 40,
                             height: 40,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: AppColor.accentColor,
                               shape: BoxShape.circle,
                             ),
                             child: Center(
                               child: RotationTransition(
                                 turns: _rotationAnimation,
-                                child: const Icon(
+                                child: Icon(
                                   Icons.keyboard_arrow_down_rounded,
-                                  color: Colors.white,
+                                  color: AppColor.cardColor,
                                   size: 24,
                                 ),
                               ),
@@ -174,3 +174,5 @@ class _CollapsibleNakathCardState extends State<CollapsibleNakathCard>
     );
   }
 }
+
+

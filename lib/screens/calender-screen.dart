@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:e_litha/models/holiday-info-model.dart';
@@ -278,7 +278,7 @@ class _CalendarScreenState extends State<CalendarScreen>
 
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColor.cardColor,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -387,7 +387,7 @@ class _CalendarScreenState extends State<CalendarScreen>
       return Container(
         height: isWideScreen ? null : containerHeight,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColor.cardColor,
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
@@ -522,3 +522,4 @@ class _EventItem {
     required this.isHoliday,
   });
 }
+

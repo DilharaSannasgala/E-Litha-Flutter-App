@@ -1,6 +1,8 @@
+﻿import 'dart:ui';
 import 'package:e_litha/utils/app-color.dart';
 import 'package:e_litha/utils/app-component.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 Widget buildSunButton(
    BuildContext context, String firstLine, String secondLine, String routeName) {
@@ -30,62 +32,78 @@ Widget buildSunButton(
       color: Colors.transparent,
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
-        onTap: () => Navigator.pushNamed(context, routeName),
-        child: Padding(
-          padding: const EdgeInsets.only(left: 18.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
+        onTap: () {
+          HapticFeedback.lightImpact();
+          Navigator.pushNamed(context, routeName);
+        },
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+            child: Container(
+              decoration: BoxDecoration(
+                color: AppColor.isDark ? Colors.black.withOpacity(0.85) : Colors.white.withOpacity(0.3),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(height: 10),
-                    Text(
-                      firstLine,
-                      style: TextStyle(
-                        color: AppColor.btnTextColor,
-                        fontSize: 22,
-                        height: 1.2,
-                        fontWeight: FontWeight.w500,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: 10),
+                          Text(
+                            firstLine,
+                            style: TextStyle(
+                              color: AppColor.btnTextColor,
+                              fontSize: 22,
+                              height: 1.2,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            secondLine,
+                            style: TextStyle(
+                              color: AppColor.btnTextColor,
+                              fontSize: 30,
+                              height: 1.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
                       ),
-                      overflow: TextOverflow.ellipsis,
                     ),
-                    Text(
-                      secondLine,
-                      style: TextStyle(
-                        color: AppColor.btnTextColor,
-                        fontSize: 30,
-                        height: 1.0,
-                        fontWeight: FontWeight.bold,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 15.0),
+                      child: Container(
+                        width: 30,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: AppColor.accentColor,
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: AppColor.cardColor,
+                          ),
+                        ),
                       ),
-                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 15.0),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColor.accentColor,
-                  ),
-                  child: Center(
-                    child: Icon(
-                      Icons.arrow_forward_ios_rounded,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
     ),
   );
 }
+
+
