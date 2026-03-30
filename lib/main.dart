@@ -10,7 +10,6 @@ import 'package:e_litha/screens/rashi-income-expense-screen.dart';
 import 'package:e_litha/screens/subha-dawasa-screen.dart';
 import 'package:e_litha/services/notification_service.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 
 // This is needed for the @pragma to work correctly
@@ -38,8 +37,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'E-Litha',
       theme: ThemeData(
-        fontFamily: GoogleFonts.abhayaLibre().fontFamily,
-        textTheme: GoogleFonts.abhayaLibreTextTheme(),
+        fontFamily: 'AbhayaLibre',
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
